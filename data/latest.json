@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "public_export": true,
+  "generated_at": "2026-06-30T21:45:00+01:00",
+  "window": {
+    "label": "Last 24 hours",
+    "start": "2026-06-29T21:45:00+01:00",
+    "end": "2026-06-30T21:45:00+01:00"
+  },
+  "stats": {
+    "sources_configured": 5,
+    "sources_checked": 5,
+    "sources_processed": 3,
+    "messages_read": 3,
+    "unique_insights": 8,
+    "duplicates_removed": 4
+  },
+  "top_stories": [
+    {
+      "title": "Inference economics are moving from model choice to serving architecture",
+      "summary": "Techmeme highlighted DeepSeek DSpark, a speculative decoding framework reported to speed inference by up to 85%. Daily Dose also covered MCP context engineering that reduces irrelevant tool definitions and shrinks tool-output tokens.",
+      "why_it_matters": "For agent systems, cost and latency will be shaped by serving tricks, model routing, tool scope, and context hygiene as much as by raw model quality.",
+      "category": "Model Infrastructure",
+      "source_names": [
+        "Techmeme",
+        "Daily Dose of DS"
+      ],
+      "source_links": [
+        {
+          "label": "SCMP on DeepSeek DSpark via Techmeme",
+          "url": "https://www.scmp.com/tech/big-tech/article/3358647/faster-ai-lower-costs-dspark-eases-inference-bottlenecks-and-chip-strain-says-deepseek"
+        },
+        {
+          "label": "Bright Data MCP",
+          "url": "https://github.com/brightdata/brightdata-mcp"
+        }
+      ]
+    },
+    {
+      "title": "Agent coding is becoming a supervised workflow, not a chat window",
+      "summary": "The Rundown covered Cursor's iOS app for launching and tracking coding agents remotely. Techmeme covered Baz Planner, which uses specialized agents during code planning, and Meta limiting external coding agents over distillation risk.",
+      "why_it_matters": "The user interface for agents is shifting toward delegation, monitoring, policy, review, and handoff. The work moves from typing code to supervising runs.",
+      "category": "Developer Workflows",
+      "source_names": [
+        "The Rundown AI",
+        "Techmeme"
+      ],
+      "source_links": [
+        {
+          "label": "Cursor iOS",
+          "url": "https://cursor.com/blog/ios-mobile-app#launch-and-track-agents-from-anywhere"
+        },
+        {
+          "label": "Baz Planner via SiliconANGLE",
+          "url": "https://siliconangle.com/2026/06/29/exclusive-agentic-coding-startup-baz-brings-code-reviews-planning-stage-extends-seed-funding-17m/"
+        },
+        {
+          "label": "Meta limits Claude Code and Codex via The Information",
+          "url": "https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation"
+        }
+      ]
+    },
+    {
+      "title": "Verifiable rewards are the useful RL path for code, math, and formal tasks",
+      "summary": "Daily Dose explained GRPO and verifiable rewards as a way to remove learned reward models and critics when tasks have objectively checkable answers.",
+      "why_it_matters": "This maps directly to practical agent loops: tests, verifiers, formal checks, and external evaluators can supply a reward signal outside the model.",
+      "category": "Training and Evaluation",
+      "source_names": [
+        "Daily Dose of DS"
+      ],
+      "source_links": [
+        {
+          "label": "Daily Dose GRPO explainer",
+          "url": "https://www.dailydoseofds.com/rl-course-part-10"
+        }
+      ]
+    },
+    {
+      "title": "Temporal memory is becoming a real agent infrastructure layer",
+      "summary": "Daily Dose highlighted Zep Graphiti, which adds schema-guided extraction, temporal validity, and contradiction handling to graph-based agent memory.",
+      "why_it_matters": "Personal and operational agents need memory that knows what changed. Static retrieval will confidently surface stale facts unless the memory layer tracks time.",
+      "category": "Agent Memory",
+      "source_names": [
+        "Daily Dose of DS"
+      ],
+      "source_links": [
+        {
+          "label": "Graphiti GitHub",
+          "url": "https://github.com/getzep/graphiti"
+        }
+      ]
+    },
+    {
+      "title": "Non-invasive brain-to-text is a high-signal research track, not a product story yet",
+      "summary": "The Rundown covered Meta Brain2Qwerty v2, which decodes full words and meanings from non-invasive scans with significantly stronger accuracy than previous non-invasive systems.",
+      "why_it_matters": "This matters for future multimodal input and accessibility. The near-term signal is research progress and open code/data, not consumer deployment.",
+      "category": "Research",
+      "source_names": [
+        "The Rundown AI"
+      ],
+      "source_links": [
+        {
+          "label": "Meta Brain2Qwerty",
+          "url": "https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication"
+        }
+      ]
+    }
+  ],
+  "tools_and_launches": [
+    {
+      "name": "Devin Fusion",
+      "summary": "Cognition previewed a coding harness that pairs a frontier model with a cheaper sidekick agent.",
+      "workflow_angle": "Explicit cost-aware routing inside an agent workflow.",
+      "source_links": [
+        {
+          "label": "Cognition Devin Fusion",
+          "url": "https://cognition.com/blog/devin-fusion"
+        }
+      ]
+    },
+    {
+      "name": "Record and Replay",
+      "summary": "The Rundown guide framed OpenAI/Codex Record and Replay as a way to turn manual workflows into reusable skills.",
+      "workflow_angle": "This is the automation path from observed manual task to scheduled reusable agent procedure.",
+      "source_links": [
+        {
+          "label": "Rundown guide",
+          "url": "https://app.therundown.ai/guides/automate-any-manual-task-with-this-openai-feature"
+        }
+      ]
+    },
+    {
+      "name": "Anthropic Economic Index",
+      "summary": "Anthropic published hourly Claude usage patterns and user survey data.",
+      "workflow_angle": "Useful evidence that AI usage is becoming routine-based, not only task-based.",
+      "source_links": [
+        {
+          "label": "Anthropic Economic Index",
+          "url": "https://www.anthropic.com/research/economic-index-june-2026-report"
+        }
+      ]
+    }
+  ],
+  "pattern_map": [
+    {
+      "theme": "Agent supervision replaces one-shot prompting",
+      "evidence": [
+        "Cursor iOS",
+        "Baz Planner",
+        "Record and Replay",
+        "Meta coding-agent restrictions"
+      ]
+    },
+    {
+      "theme": "Model-infra work is moving toward cost and latency",
+      "evidence": [
+        "DeepSeek DSpark",
+        "Devin Fusion",
+        "Amazon model-cost reporting",
+        "MCP context reduction"
+      ]
+    },
+    {
+      "theme": "Verification is the useful bridge between agents and reliability",
+      "evidence": [
+        "GRPO/verifiable rewards",
+        "coding-agent review workflows",
+        "agent memory contradiction handling"
+      ]
+    }
+  ],
+  "skipped_noise_summary": [
+    "Techmeme's non-AI legal, crypto, IPO, sports-streaming, and general market items were skipped unless they affected AI infrastructure or developer workflows.",
+    "Newsletter sponsor blocks, ads, unsubscribe/preference links, and course promos were ignored.",
+    "Consumer AI entertainment and generic tool listings were skipped unless they had a clear agent, infra, or workflow angle."
+  ],
+  "watchlist": [
+    "Track whether DSpark-style speculative decoding becomes a mainstream serving primitive.",
+    "Watch Cursor mobile agent supervision for stalled-task UX, PR review, and notification design.",
+    "Keep an eye on cost-aware multi-agent routing like Devin Fusion.",
+    "Use verifiable rewards and external validators as recurring themes for agent reliability content."
+  ]
+}

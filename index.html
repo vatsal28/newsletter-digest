@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AI systems brief — since 23 June 2026</title>
-<meta name="description" content="A public preview brief on AI systems, agents, inference, and model infrastructure from sources reviewed since 23 June 2026." />
+<title>AI systems brief — since 29 June 2026</title>
+<meta name="description" content="A public preview brief on AI systems, agents, inference, and model infrastructure from selected newsletters." />
 <meta name="robots" content="noindex,nofollow" />
 <meta name="referrer" content="no-referrer" />
 <style>
@@ -19,106 +19,57 @@
     <div class="issue-top">
       <div>
         <div class="brand">AI systems brief</div>
-        <h1>Agents need loops. Model companies need the whole stack.</h1>
+        <h1>Inference economics are moving from model choice to serving architecture</h1>
       </div>
       <aside class="runbox" aria-label="issue metadata">
-        <div><span>Issue date</span><b>27 June 2026</b></div>
+        <div><span>Issue date</span><b>30 June 2026</b></div>
+        <div><span>Messages read</span><b>3</b></div>
+        <div><span>Signals</span><b>8</b></div>
       </aside>
     </div>
-    <div class="themes"><b>Themes:</b> <span>models</span> · <span>agents</span> · <span>inference</span> · <span>compute</span> · <span>verification</span></div>
+    <div class="themes"><b>Themes:</b> <span>inference</span> · <span>agents</span> · <span>verification</span> · <span>memory</span> · <span>research</span></div>
   </header>
 
   <section class="at-glance" aria-labelledby="at-a-glance-title">
     <div><div class="section-label">At a glance</div></div>
-    <ol id="at-a-glance-title">
-      <li>Agent products are converging around loop engineering, not prompt design.</li>
-      <li>Model companies are moving down-stack into chips, serving, routing, and access control.</li>
-      <li>Verification layers are becoming mandatory around retrieval, coding agents, security, and long-running AI work.</li>
-    </ol>
+    <ol id="at-a-glance-title"><li>Inference economics are moving from model choice to serving architecture: for agent systems, cost and latency will be shaped by serving tricks, model routing, tool scope, and context hygiene as much as by raw model quality.</li><li>Agent coding is becoming a supervised workflow, not a chat window: the user interface for agents is shifting toward delegation, monitoring, policy, review, and handoff. The work moves from typing code to supervising runs.</li><li>Verifiable rewards are the useful RL path for code, math, and formal tasks: this maps directly to practical agent loops: tests, verifiers, formal checks, and external evaluators can supply a reward signal outside the model.</li></ol>
   </section>
 
-  <section class="thesis">
-    <div class="section-label">Thesis</div>
-    <p>The winning AI stack is getting wider: custom chips underneath, shared agents on top, and stricter checks around anything that runs for more than a few turns.</p>
-  </section>
+  <section class="thesis"><div class="section-label">Thesis</div><p>Today dry run found 3 allowlisted newsletter messages, extracted 8 unique AI/agent/model-infra signals, removed 4 repeated signals, and prepared local latest.json/latest.md. User explicitly approved Gmail processing for this run: apply [redacted], mark read, and move out of Inbox.</p></section>
 
   <section class="lead">
     <div class="num">01</div>
     <div>
-      <div class="kicker">Lead signal · agents</div>
-      <h2>Loop engineering is the clearest agent pattern in the batch</h2>
-      <p><strong>Signal:</strong> Several sources came back to the same point: an agent is not just a model call. It is a loop with tools, memory, stop rules, tests, and review. The hard part is not the while loop. The hard part is deciding when the work is actually done.</p>
-      <div class="why"><strong>Why it matters:</strong> this is where useful agent products will differ. The prompt matters, but the surrounding loop decides whether the agent ships a working result or a confident mess.</div>
-      <div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://www.dailydoseofds.com/p/loop-engineering-clearly-explained/" rel="noopener noreferrer">Loop engineering explainer</a></div>
-      
+      <div class="kicker">Lead signal · Model Infrastructure</div>
+      <h2>Inference economics are moving from model choice to serving architecture</h2>
+      <p><strong>Signal:</strong> Techmeme highlighted DeepSeek DSpark, a speculative decoding framework reported to speed inference by up to 85%. Daily Dose also covered MCP context engineering that reduces irrelevant tool definitions and shrinks tool-output tokens.</p>
+      <div class="why"><strong>Why it matters:</strong> For agent systems, cost and latency will be shaped by serving tricks, model routing, tool scope, and context hygiene as much as by raw model quality.</div>
+      <div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://www.scmp.com/tech/big-tech/article/3358647/faster-ai-lower-costs-dspark-eases-inference-bottlenecks-and-chip-strain-says-deepseek" rel="noopener noreferrer">SCMP on DeepSeek DSpark via Techmeme</a><a class="source-chip" href="https://github.com/brightdata/brightdata-mcp" rel="noopener noreferrer">Bright Data MCP</a></div>
     </div>
   </section>
 
   <section class="briefing" aria-labelledby="briefing-title">
     <div class="section-head"><h2 id="briefing-title">Supporting signals</h2><span>grouped by theme</span></div>
-
-    <section class="briefing-group" aria-labelledby="compute-stack-title">
-      <h3 id="compute-stack-title" class="group-title">Inference + compute stack</h3>
-      <article class="item"><div><div class="meta">AI infrastructure</div><h3>OpenAI's Jalapeño chip makes compute a product feature</h3><p><strong>Signal:</strong> OpenAI and Broadcom unveiled Jalapeño, an inference chip built for large language models. OpenAI says its models helped with design and optimisation.</p><p class="read"><strong>Read:</strong> if a model company controls the model, serving stack, and chip, cost and speed become part of the product moat.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip" rel="noopener noreferrer">OpenAI source</a></div></div></article>
-      <article class="item"><div><div class="meta">Inference</div><h3>DFlash makes speculative decoding look more practical</h3><p><strong>Signal:</strong> Modal's DFlash draft models for Qwen use block diffusion and workload-specific training to raise the number of draft tokens the main model accepts.</p><p class="read"><strong>Read:</strong> if you run your own inference, trained drafters could be a cheap speed gain.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://huggingface.co/modal-labs" rel="noopener noreferrer">Modal Labs</a></div></div></article>
-      <article class="item"><div><div class="meta">Compute stack</div><h3>Qualcomm buying Modular points to a software layer for AI chips</h3><p><strong>Signal:</strong> Qualcomm's reported Modular deal fits the same pattern as Jalapeño. Hardware matters, but the software layer decides how easy it is to use.</p><p class="read"><strong>Read:</strong> chip companies need a good developer layer, not just faster silicon.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://www.wired.com/story/qualcomm-buys-buzzy-chip-startup-modular-for-nearly-dollar4-billion/" rel="noopener noreferrer">Wired</a><a class="source-chip" href="https://www.cnbc.com/2026/06/24/qualcomm-data-center-cpu-meta.html" rel="noopener noreferrer">CNBC</a></div></div></article>
-    </section>
-
-    <section class="briefing-group" aria-labelledby="agent-systems-title">
-      <h3 id="agent-systems-title" class="group-title">Agent systems + verification</h3>
-      <article class="item"><div><div class="meta">Agent training</div><h3>OpenPipe ART trains agents on multi-step tasks</h3><p><strong>Signal:</strong> ART lets agents try a task several times, compares the attempts with an LLM judge, and trains the model from those comparisons. It supports tool calls and multi-turn workflows.</p><p class="read"><strong>Read:</strong> small open models may get much better at narrow agent tasks.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://github.com/OpenPipe/ART" rel="noopener noreferrer">OpenPipe ART GitHub</a></div></div></article>
-      <article class="item"><div><div class="meta">Agent security</div><h3>Strix treats security testing as an agent job</h3><p><strong>Signal:</strong> Strix crawls running apps, maps routes, probes abuse paths, and returns proof-of-concept findings with suggested fixes.</p><p class="read"><strong>Read:</strong> coding agents create more software. Security agents may become the check on that speed.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://github.com/usestrix/strix" rel="noopener noreferrer">Strix GitHub</a></div></div></article>
-      <article class="item"><div><div class="meta">RAG workflow</div><h3>Corrective RAG adds a check before generation</h3><p><strong>Signal:</strong> A corrective RAG flow retrieves documents, grades whether they are relevant, keeps only useful context, and falls back to web search when needed.</p><p class="read"><strong>Read:</strong> retrieval needs a quality check before the model starts answering.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://github.com/patchy631/ai-engineering-hub/tree/main/firecrawl-agent" rel="noopener noreferrer">example implementation</a></div></div></article>
-      <article class="item"><div><div class="meta">Workplace agents</div><h3>Claude Tag moves agents into the shared work surface</h3><p><strong>Signal:</strong> Claude Tag lets teams mention Claude inside Slack, hand off tasks, and keep context visible in channels instead of private chat windows.</p><p class="read"><strong>Read:</strong> useful agents are moving from single-player chat into team software.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://www.anthropic.com/" rel="noopener noreferrer">Anthropic</a><a class="source-chip" href="https://www.theregister.com/ai-and-ml/2026/06/25/openai-says-employees-moving-beyond-chat-to-agents/5262499" rel="noopener noreferrer">The Register</a></div></div></article>
-    </section>
-
-    <section class="briefing-group" aria-labelledby="model-access-title">
-      <h3 id="model-access-title" class="group-title">Model access + routing</h3>
-      <article class="item"><div><div class="meta">Frontier access</div><h3>GPT-5.6 and Mythos show model launches now need political clearance</h3><p><strong>Signal:</strong> Reports said the US limited or staggered access to GPT-5.6. Other reporting said Mythos access widened while Fable talks continued.</p><p class="read"><strong>Read:</strong> frontier model access now looks like a security process, not a normal software launch.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://www.axios.com/2026/06/26/openai-gpt-sol-terra-luna-trump" rel="noopener noreferrer">Axios</a><a class="source-chip" href="https://openai.com/index/previewing-gpt-5-6-sol/" rel="noopener noreferrer">OpenAI</a><a class="source-chip" href="https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies" rel="noopener noreferrer">Semafor</a></div></div></article>
-      <article class="item"><div><div class="meta">Model routing</div><h3>Sakana's Fugu frames routing as risk management</h3><p><strong>Signal:</strong> Fugu routes work across specialised models and combines the results behind one API. The pitch is partly about avoiding dependence on one vendor or one country's access rules.</p><p class="read"><strong>Read:</strong> routing is about resilience as much as cost.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://sakana.ai/" rel="noopener noreferrer">Sakana AI</a></div></div></article>
-      <article class="item"><div><div class="meta">Open models</div><h3>GLM-5.2 pushes open models toward long-running coding work</h3><p><strong>Signal:</strong> GLM-5.2 was described as a coding-focused model with a 1 million token context, function calling, structured output, context caching, and strong agentic coding benchmark results.</p><p class="read"><strong>Read:</strong> open models are not only chasing chat quality. They are being shaped for long-running software tasks.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://huggingface.co/collections/zai-org/glm-52-685b4ca6b6b11911f20624df" rel="noopener noreferrer">GLM-5.2 on Hugging Face</a></div></div></article>
-    </section>
-
-    <section class="briefing-group" aria-labelledby="device-title">
-      <h3 id="device-title" class="group-title">Device surfaces</h3>
-      <article class="item"><div><div class="meta">On-device AI</div><h3>Apple's AFM 3 shows how much local AI depends on memory</h3><p><strong>Signal:</strong> AFM 3 Core Advanced is described as a 20 billion parameter on-device model with only 1 to 4 billion active parameters at a time.</p><p class="read"><strong>Read:</strong> local AI is mostly a memory and bandwidth problem. Model design will bend around that.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://machinelearning.apple.com/" rel="noopener noreferrer">Apple ML</a></div></div></article>
-      <article class="item"><div><div class="meta">Wearables</div><h3>Meta's smart glasses are still the main consumer AI hardware signal</h3><p><strong>Signal:</strong> Meta added more smart glasses styles and kept pushing Meta AI as the built-in assistant. Most of the details are consumer packaging, but the distribution point matters.</p><p class="read"><strong>Read:</strong> glasses may become a useful AI surface before dedicated AI gadgets do. Annoying, but plausible.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://www.meta.com/ai-glasses/" rel="noopener noreferrer">Meta AI glasses</a></div></div></article>
-    </section>
+    <section class="briefing-group" aria-labelledby="developer-workflows-title"><h3 id="developer-workflows-title" class="group-title">Developer Workflows</h3><article class="item"><div><div class="meta">Developer Workflows</div><h3>Agent coding is becoming a supervised workflow, not a chat window</h3><p><strong>Signal:</strong> The Rundown covered Cursor&#x27;s iOS app for launching and tracking coding agents remotely. Techmeme covered Baz Planner, which uses specialized agents during code planning, and Meta limiting external coding agents over distillation risk.</p><p class="read"><strong>Read:</strong> The user interface for agents is shifting toward delegation, monitoring, policy, review, and handoff. The work moves from typing code to supervising runs.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://cursor.com/blog/ios-mobile-app#launch-and-track-agents-from-anywhere" rel="noopener noreferrer">Cursor iOS</a><a class="source-chip" href="https://siliconangle.com/2026/06/29/exclusive-agentic-coding-startup-baz-brings-code-reviews-planning-stage-extends-seed-funding-17m/" rel="noopener noreferrer">Baz Planner via SiliconANGLE</a><a class="source-chip" href="https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation" rel="noopener noreferrer">Meta limits Claude Code and Codex via The Information</a></div></div></article></section> <section class="briefing-group" aria-labelledby="training-and-evaluation-title"><h3 id="training-and-evaluation-title" class="group-title">Training and Evaluation</h3><article class="item"><div><div class="meta">Training and Evaluation</div><h3>Verifiable rewards are the useful RL path for code, math, and formal tasks</h3><p><strong>Signal:</strong> Daily Dose explained GRPO and verifiable rewards as a way to remove learned reward models and critics when tasks have objectively checkable answers.</p><p class="read"><strong>Read:</strong> This maps directly to practical agent loops: tests, verifiers, formal checks, and external evaluators can supply a reward signal outside the model.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://www.dailydoseofds.com/rl-course-part-10" rel="noopener noreferrer">Daily Dose GRPO explainer</a></div></div></article></section> <section class="briefing-group" aria-labelledby="agent-memory-title"><h3 id="agent-memory-title" class="group-title">Agent Memory</h3><article class="item"><div><div class="meta">Agent Memory</div><h3>Temporal memory is becoming a real agent infrastructure layer</h3><p><strong>Signal:</strong> Daily Dose highlighted Zep Graphiti, which adds schema-guided extraction, temporal validity, and contradiction handling to graph-based agent memory.</p><p class="read"><strong>Read:</strong> Personal and operational agents need memory that knows what changed. Static retrieval will confidently surface stale facts unless the memory layer tracks time.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://github.com/getzep/graphiti" rel="noopener noreferrer">Graphiti GitHub</a></div></div></article></section> <section class="briefing-group" aria-labelledby="research-title"><h3 id="research-title" class="group-title">Research</h3><article class="item"><div><div class="meta">Research</div><h3>Non-invasive brain-to-text is a high-signal research track, not a product story yet</h3><p><strong>Signal:</strong> The Rundown covered Meta Brain2Qwerty v2, which decodes full words and meanings from non-invasive scans with significantly stronger accuracy than previous non-invasive systems.</p><p class="read"><strong>Read:</strong> This matters for future multimodal input and accessibility. The near-term signal is research progress and open code/data, not consumer deployment.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication" rel="noopener noreferrer">Meta Brain2Qwerty</a></div></div></article></section> <section class="briefing-group" aria-labelledby="tools-launches-title"><h3 id="tools-launches-title" class="group-title">Tools + launches</h3><article class="item"><div><div class="meta">tool</div><h3>Devin Fusion</h3><p><strong>Signal:</strong> Cognition previewed a coding harness that pairs a frontier model with a cheaper sidekick agent.</p><p class="read"><strong>Read:</strong> Explicit cost-aware routing inside an agent workflow.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://cognition.com/blog/devin-fusion" rel="noopener noreferrer">Cognition Devin Fusion</a></div></div></article>
+<article class="item"><div><div class="meta">tool</div><h3>Record and Replay</h3><p><strong>Signal:</strong> The Rundown guide framed OpenAI/Codex Record and Replay as a way to turn manual workflows into reusable skills.</p><p class="read"><strong>Read:</strong> This is the automation path from observed manual task to scheduled reusable agent procedure.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://app.therundown.ai/guides/automate-any-manual-task-with-this-openai-feature" rel="noopener noreferrer">Rundown guide</a></div></div></article>
+<article class="item"><div><div class="meta">tool</div><h3>Anthropic Economic Index</h3><p><strong>Signal:</strong> Anthropic published hourly Claude usage patterns and user survey data.</p><p class="read"><strong>Read:</strong> Useful evidence that AI usage is becoming routine-based, not only task-based.</p><div class="source-row"><span class="row-label">Sources</span><a class="source-chip" href="https://www.anthropic.com/research/economic-index-june-2026-report" rel="noopener noreferrer">Anthropic Economic Index</a></div></div></article></section>
   </section>
 
   <section class="pattern-map" aria-labelledby="pattern-map-title">
     <div class="section-head"><h2 id="pattern-map-title">Repeated signals</h2><span>deduped pattern map</span></div>
-    <table class="signal-table"><thead><tr><th>Theme</th><th>Sources</th><th>Read</th></tr></thead><tbody>
-      <tr><td data-label="Theme">Agent loops</td><td data-label="Sources">5</td><td data-label="Read">Loops, stop rules, testing, context rot, and reviewer separation showed up repeatedly.</td></tr>
-      <tr><td data-label="Theme">Vertical AI stack</td><td data-label="Sources">4</td><td data-label="Read">Custom chips, compute software, GPU pricing, and data centre CPUs all point in the same direction.</td></tr>
-      <tr><td data-label="Theme">Controlled frontier access</td><td data-label="Sources">4</td><td data-label="Read">Model access is being shaped by policy and security review.</td></tr>
-      <tr><td data-label="Theme">Verification layer</td><td data-label="Sources">4</td><td data-label="Read">Security testing, retrieval checks, agent training, and eval tooling all add checks around model output.</td></tr>
-    </tbody></table>
+    <table class="signal-table"><thead><tr><th>Theme</th><th>Sources</th><th>Read</th></tr></thead><tbody><tr><td data-label="Theme">Agent supervision replaces one-shot prompting</td><td data-label="Sources">4</td><td data-label="Read">Cursor iOS, Baz Planner, Record and Replay, Meta coding-agent restrictions</td></tr><tr><td data-label="Theme">Model-infra work is moving toward cost and latency</td><td data-label="Sources">4</td><td data-label="Read">DeepSeek DSpark, Devin Fusion, Amazon model-cost reporting, MCP context reduction</td></tr><tr><td data-label="Theme">Verification is the useful bridge between agents and reliability</td><td data-label="Sources">3</td><td data-label="Read">GRPO/verifiable rewards, coding-agent review workflows, agent memory contradiction handling</td></tr></tbody></table>
   </section>
 
-  <section class="supporting">
-    <div class="panel">
-      <h3>Lower-priority items reviewed</h3>
-      <p class="small" style="font-family:var(--sans);font-size:14px;color:#51483f;margin-bottom:12px">These were reviewed but not elevated because they were less relevant to agents, inference, AI infrastructure, or technical workflows.</p>
-      <details><summary>Quick scan</summary><ul>
-        <li><a href="https://www.wsj.com/tech/apple-raises-prices-on-macs-ipads-by-200-or-more-on-some-models-a7463f99" rel="noopener noreferrer">Apple, Microsoft, and Xbox price hikes:</a> useful memory-cost context, but weaker than the AI infrastructure items above.</li>
-        <li><a href="https://www.nytimes.com/2026/06/25/technology/ibm-technology-tinier-chips.html" rel="noopener noreferrer">IBM 0.7nm process:</a> interesting chip research, but not near-term AI workflow signal.</li>
-        <li><a href="https://9to5mac.com/2026/06/25/notion-shutting-down-its-ai-powered-email-client-including-mac-and-ios-apps/" rel="noopener noreferrer">Notion Mail shutdown:</a> notable product news, but thin as an agent signal.</li>
-        <li><a href="https://www.bloomberg.com/news/articles/2026-06-25/ai-demand-begins-to-justify-massive-cost-of-data-center-buildout" rel="noopener noreferrer">AI sales versus depreciation:</a> important macro signal, but this issue was already infrastructure-heavy.</li>
-        <li><a href="https://techcrunch.com/2026/06/25/from-fortnite-to-robots-general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world/" rel="noopener noreferrer">General Intuition funding:</a> interesting spatial-agent bet, but still mostly a funding story.</li>
-        <li><a href="https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-that-stress-test-ai-agents/" rel="noopener noreferrer">Patronus AI funding:</a> relevant to evals, but kept as supporting evidence under verification.</li>
-        <li><a href="https://siliconangle.com/2026/06/24/coval-raises-28m-enterprises-push-voice-agents-production/" rel="noopener noreferrer">Coval funding:</a> relevant to voice-agent testing, but lower priority than open tooling.</li>
-        <li><a href="https://app.therundown.ai/guides/give-an-ai-agent-a-credit-card-safely" rel="noopener noreferrer">AgentCard guide:</a> useful, but a guide rather than a market or architecture signal.</li>
-        <li><a href="https://www.reuters.com/legal/litigation/chinas-360-says-it-has-developed-tools-match-anthropics-mythos-2026-06-24/" rel="noopener noreferrer">China 360 AI cyber tools:</a> relevant but thin. Worth watching if it repeats.</li>
-        <li><a href="https://www.businessinsider.com/superhuman-acquires-gptzero-ai-authenticity-tools-2026-6" rel="noopener noreferrer">Superhuman and GPTZero:</a> authenticity tooling, not central to this issue.</li>
-        <li><a href="https://www.nytimes.com/2026/06/23/technology/meta-prediction-markets-app.html" rel="noopener noreferrer">Meta prediction markets:</a> interesting product move, but not central to AI systems.</li>
-        <li><a href="https://openai.com/" rel="noopener noreferrer">OpenAI and Getty image partnership:</a> useful content provenance signal, but lower priority than agents and compute.</li>
-      </ul></details>
-    </div>
-  </section>
+  <section class="supporting"><div class="panel"><h3>Lower-priority items reviewed</h3><p class="small" style="font-family:var(--sans);font-size:14px;color:#51483f;margin-bottom:12px">These were reviewed but not elevated because they were lower-signal, repetitive, or less relevant to agents, inference, model infrastructure, or technical workflows.</p><details><summary>Quick scan</summary><ul><li>Techmeme&#x27;s non-AI legal, crypto, IPO, sports-streaming, and general market items were skipped unless they affected AI infrastructure or developer workflows.</li>
+<li>Newsletter sponsor blocks, ads, unsubscribe/preference links, and course promos were ignored.</li>
+<li>Consumer AI entertainment and generic tool listings were skipped unless they had a clear agent, infra, or workflow angle.</li>
+<li>Track whether DSpark-style speculative decoding becomes a mainstream serving primitive.</li>
+<li>Watch Cursor mobile agent supervision for stalled-task UX, PR review, and notification design.</li>
+<li>Keep an eye on cost-aware multi-agent routing like Devin Fusion.</li>
+<li>Use verifiable rewards and external validators as recurring themes for agent reliability content.</li></ul></details></div></section>
 
   <footer class="footer">
-    <div><div class="kicker">Method</div><p class="small">The source list is curated by a human. AI helps scan the selected sources, group repeated items, draft the brief, and check links. A human reviews the final selection and framing before publication.</p></div>
+    <div><div class="kicker">Method</div><p class="small">The source list is curated by a human. AI helps scan the selected sources, group repeated items, draft the brief, and check links. Gmail metadata and private workflow details are excluded from this public artifact.</p></div>
     <div><div class="kicker">AI disclosure</div><p class="small">This brief is generated with AI assistance and edited for clarity. Links point to public sources where available.</p></div>
   </footer>
 </main>
