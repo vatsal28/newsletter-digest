@@ -1,11 +1,18 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "public_export": true,
   "generated_at": "2026-06-30T20:29:00+01:00",
   "window": {
     "label": "Last 24 hours",
     "start": "2026-06-29T20:29:00+01:00",
     "end": "2026-06-30T20:29:00+01:00"
+  },
+  "stats": {
+    "sources_checked": 5,
+    "messages_read": 4,
+    "unique_insights": 10,
+    "duplicates_removed": 5,
+    "gmail_mutations_applied": 0
   },
   "top_stories": [
     {
@@ -181,7 +188,39 @@
       ]
     }
   ],
-  "content_ideas": [],
+  "pattern_map": [
+    {
+      "theme": "Agent supervision replaces one-shot prompting",
+      "evidence": [
+        "Cursor iOS",
+        "Baz Planner",
+        "Record and Replay reusable skills",
+        "Meta restrictions on external coding agents"
+      ]
+    },
+    {
+      "theme": "Model-infra work is moving toward cost and latency",
+      "evidence": [
+        "DeepSeek DSpark",
+        "Devin Fusion",
+        "Amazon model-cost reporting",
+        "MCP context reduction"
+      ]
+    },
+    {
+      "theme": "Model access is increasingly governed",
+      "evidence": [
+        "GPT-5.6 gated preview",
+        "Claude institutional access restrictions",
+        "California-Anthropic public-sector deal"
+      ]
+    }
+  ],
+  "skipped_noise_summary": [
+    "Consumer entertainment policy items were skipped unless they affected model access, infra, or workflow design.",
+    "General tech litigation and market headlines from Techmeme were skipped when they had no AI, agent, infrastructure, or developer-workflow angle.",
+    "Sponsor blocks, ads, course promos, and repeated newsletter house promos were ignored."
+  ],
   "watchlist": [
     "Check whether DSpark or similar speculative decoding lands in mainstream serving stacks.",
     "Watch Cursor mobile agent supervision for stalled-task UX and PR review flow.",

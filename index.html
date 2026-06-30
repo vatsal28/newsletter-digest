@@ -3,271 +3,194 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f7f6f1" />
-  <title>Newsletter Insight Digest</title>
+  <meta name="theme-color" content="#fff1e5" />
+  <title>Vatsal’s AI Brief — Newsletter Insight Digest</title>
   <style>
     :root {
-      --bg: #f7f6f1;
-      --ink: #171918;
-      --muted: #5f6864;
-      --line: #dedbd2;
-      --panel: #fffef9;
+      --paper: #fff1e5;
+      --paper-2: #fff8ef;
+      --ink: #2f2a25;
+      --muted: #6e6259;
+      --line: #dfcdb9;
+      --teal: #08737e;
+      --clay: #b8482b;
+      --gold: #c58a19;
       --green: #0a6f56;
-      --blue: #2857b7;
-      --gold: #d89b21;
+      --shadow: 0 24px 60px rgba(80, 49, 26, .10);
     }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      background: var(--bg);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(8,115,126,.12), transparent 28rem),
+        radial-gradient(circle at 90% 8%, rgba(184,72,43,.10), transparent 28rem),
+        var(--paper);
       color: var(--ink);
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      letter-spacing: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     a { color: inherit; }
-    .shell {
-      width: min(1120px, calc(100% - 28px));
-      margin: 0 auto;
-      padding: 22px 0 42px;
-    }
-    .top {
-      display: grid;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-    .kicker {
-      color: var(--green);
-      font-size: 0.78rem;
-      font-weight: 850;
-      text-transform: uppercase;
-    }
-    h1 {
-      margin: 0;
-      max-width: 11ch;
-      font-size: clamp(2.2rem, 8vw, 5.2rem);
-      line-height: 0.95;
-    }
-    .lede {
-      max-width: 66ch;
-      color: var(--muted);
-      font-size: clamp(1rem, 2.2vw, 1.25rem);
-      line-height: 1.5;
-    }
-    .signal {
-      display: grid;
-      gap: 12px;
-      margin: 22px 0;
-      padding: clamp(18px, 4vw, 30px);
-      border: 1px solid #cfd7d2;
-      border-radius: 10px;
-      background: #10201d;
-      color: #f7fffb;
-    }
-    .signal h2 {
-      margin: 0;
-      max-width: 16ch;
-      font-size: clamp(1.9rem, 5vw, 3.8rem);
-      line-height: 1;
-    }
-    .signal p { max-width: 74ch; color: #dbe8e4; }
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      min-height: 28px;
-      padding: 0 10px;
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 999px;
-      color: #bdd3cc;
-      font-size: 0.76rem;
-      font-weight: 850;
-      text-transform: uppercase;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.8fr);
-      gap: 18px;
-      align-items: start;
-    }
-    .section {
-      display: grid;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-    .section h2 {
-      margin: 0;
-      font-size: clamp(1.35rem, 3vw, 2rem);
-    }
-    .card-list {
-      display: grid;
-      gap: 10px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    .card {
-      display: grid;
-      gap: 8px;
-      padding: 15px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--panel);
-    }
-    .card h3 {
-      margin: 0;
-      font-size: clamp(1.08rem, 2vw, 1.32rem);
-      line-height: 1.15;
-    }
-    p {
-      margin: 0;
-      line-height: 1.5;
-    }
-    .meta {
-      color: var(--muted);
-      font-size: 0.74rem;
-      font-weight: 850;
-      text-transform: uppercase;
-    }
-    .why {
-      padding-left: 10px;
-      border-left: 3px solid var(--gold);
-      color: #313834;
-      font-size: 0.96rem;
-    }
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .links a {
-      padding: 7px 9px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: #fff;
-      color: var(--blue);
-      font-size: 0.82rem;
-      font-weight: 800;
-      text-decoration: none;
-    }
-    .rail {
-      position: sticky;
-      top: 16px;
-      display: grid;
-      gap: 12px;
-    }
-    .rail-card {
-      padding: 15px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #eef3f1;
-    }
-    .rail-card h2 { margin: 0 0 10px; font-size: 1.1rem; }
-    .rail-card ul { margin: 0; padding-left: 18px; }
-    .rail-card li { margin: 0 0 8px; line-height: 1.4; }
-    @media (max-width: 820px) {
-      .grid { grid-template-columns: 1fr; }
-      .rail { position: static; }
-    }
+    .page { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 54px; }
+    .masthead { border-bottom: 2px solid var(--ink); padding-bottom: 18px; margin-bottom: 28px; }
+    .mast-row { display:flex; justify-content:space-between; gap:16px; align-items:end; flex-wrap:wrap; }
+    .brand { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2.1rem, 7vw, 5.6rem); line-height:.86; letter-spacing:-.055em; max-width: 9ch; }
+    .meta { color: var(--muted); font-size:.82rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; display:grid; gap:6px; text-align:right; }
+    .dek { margin: 18px 0 0; max-width: 75ch; color: var(--muted); font-size: clamp(1.05rem, 2.2vw, 1.35rem); line-height:1.45; }
+    .grid { display:grid; grid-template-columns: minmax(0, 1.55fr) minmax(290px, .75fr); gap: 24px; align-items:start; }
+    .panel { border:1px solid var(--line); background: rgba(255,248,239,.78); box-shadow: var(--shadow); }
+    .lead { padding: clamp(18px, 4vw, 32px); border-radius: 4px; background: #10201d; color: #f9fff9; margin-bottom:24px; }
+    .lead .section-kicker, .lead .why { color:#cce0da; }
+    .lead h1 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2rem, 5vw, 4.7rem); line-height: .98; margin: 8px 0 12px; letter-spacing:-.04em; }
+    .lead p { color:#e3eee9; max-width: 78ch; line-height:1.52; }
+    .section { margin: 0 0 26px; }
+    .section-title { display:flex; align-items:center; gap:10px; border-bottom:1px solid var(--line); margin:0 0 14px; padding-bottom:8px; }
+    .section-title h2 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.55rem, 3vw, 2.45rem); line-height:1; margin:0; }
+    .section-kicker { color: var(--teal); font-size:.76rem; font-weight:900; letter-spacing:.09em; text-transform:uppercase; }
+    .at-glance { padding:18px; border-radius:4px; margin-bottom:24px; }
+    .at-glance ol { margin: 10px 0 0; padding-left: 22px; display:grid; gap:10px; }
+    .at-glance li { line-height:1.35; font-weight:700; }
+    .thesis { padding:18px; border-left:5px solid var(--clay); background: rgba(255,255,255,.42); margin-bottom:24px; font-size:1.02rem; line-height:1.5; }
+    .story-card { display:grid; grid-template-columns: 46px minmax(0, 1fr); gap:14px; padding:18px 0; border-bottom:1px solid var(--line); }
+    .story-card:first-of-type { padding-top:0; }
+    .story-num { font-family: Georgia, 'Times New Roman', serif; color: var(--clay); font-size:1.6rem; line-height:1; font-weight:700; }
+    .story-card h3 { font-family: Georgia, 'Times New Roman', serif; margin:4px 0 8px; font-size: clamp(1.25rem, 2.4vw, 1.75rem); line-height:1.08; }
+    .story-card p, .mini-card p, .pattern-card p { margin:0 0 10px; color:#433b35; line-height:1.5; }
+    .why { padding-left:12px; border-left:3px solid var(--gold); color:#3b332d !important; }
+    .lead .why { color:#f4e7ba !important; }
+    .lead .why strong { color:#ffe6a7; }
+    .source-row { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+    .chip { display:inline-flex; align-items:center; min-height:32px; padding:0 11px; border:1px solid var(--line); border-radius:999px; background:#fffaf3; color:var(--teal); font-size:.82rem; font-weight:800; text-decoration:none; }
+    .primary-source { border-color: rgba(8,115,126,.38); background:#eef8f7; }
+    .muted-chip { color:var(--muted); }
+    .side { display:grid; gap:16px; position: sticky; top:18px; }
+    .side-card, .mini-card, .pattern-card, details { padding:16px; border:1px solid var(--line); background:rgba(255,250,243,.82); border-radius:4px; }
+    .side-card h2, .mini-card h3, .pattern-card h3, details summary { margin:0 0 10px; font-size:1rem; font-weight:900; }
+    .side-card ul, .pattern-card ul, details ul { margin:0; padding-left:18px; display:grid; gap:8px; }
+    .side-card li, .pattern-card li, details li { line-height:1.35; }
+    .mini-grid, .pattern-grid { display:grid; gap:12px; }
+    .mini-card h3, .pattern-card h3 { font-family: Georgia, 'Times New Roman', serif; font-size:1.2rem; line-height:1.12; }
+    footer { margin-top:34px; padding-top:18px; border-top:2px solid var(--ink); color:var(--muted); font-size:.88rem; line-height:1.5; }
+    @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } .side { position: static; } .meta { text-align:left; } .story-card { grid-template-columns: 34px minmax(0,1fr); } .page { width:min(100% - 24px, 1120px); padding-top:18px; } }
   </style>
 </head>
 <body>
-  <main class="shell">
-    <section class="top">
-      <div class="kicker">Cloidberg public demo</div>
-      <h1>Newsletter Insight Digest</h1>
-      <p class="lede">A sanitized public snapshot of the local newsletter digest UI: signals, content angles, and follow-up ideas without inbox metadata.</p>
-    </section>
-    <div id="app">Loading digest...</div>
-  </main>
-  <script>
-    const app = document.querySelector('#app');
-    const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({
-      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-    }[char]));
-    const compact = (value, max = 180) => {
-      const text = String(value || '').replace(/\s+/g, ' ').trim();
-      return text.length <= max ? text : `${text.slice(0, max - 1).trim()}...`;
-    };
-    const links = sourceLinks => {
-      const safe = Array.isArray(sourceLinks) ? sourceLinks : [];
-      if (!safe.length) return '';
-      return `<div class="links">${safe.slice(0, 3).map(link =>
-        `<a href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label || 'Source')}</a>`
-      ).join('')}</div>`;
-    };
-    const storyCard = story => `
-      <li class="card">
-        <div class="meta">${escapeHtml(story.category || 'News')}${story.source_names?.length ? ` · ${escapeHtml(story.source_names.join(' + '))}` : ''}</div>
-        <h3>${escapeHtml(story.title)}</h3>
-        <p>${escapeHtml(compact(story.summary))}</p>
-        ${story.why_it_matters ? `<p class="why"><strong>Why it matters:</strong> ${escapeHtml(compact(story.why_it_matters, 155))}</p>` : ''}
-        ${links(story.source_links)}
-      </li>
-    `;
-    const simpleCard = (item, label) => `
-      <li class="card">
-        <div class="meta">${label}</div>
-        <h3>${escapeHtml(item.title || item.name)}</h3>
-        <p>${escapeHtml(compact(item.summary || item.angle || item.workflow_angle || item.evidence, 175))}</p>
-        ${item.workflow_angle ? `<p class="why">${escapeHtml(compact(item.workflow_angle, 140))}</p>` : ''}
-        ${links(item.source_links)}
-      </li>
-    `;
-    const render = digest => {
-      const stories = digest.top_stories || [];
-      const signal = stories[0] || {};
-      app.innerHTML = `
-        <section class="signal">
-          <div class="tag-row">
-            <span class="tag">Today's Signal</span>
-            <span class="tag">${escapeHtml(signal.category || digest.window?.label || 'Latest')}</span>
-          </div>
-          <h2>${escapeHtml(signal.title || 'No digest yet')}</h2>
-          <p>${escapeHtml(compact(signal.summary || 'Write the latest public export to publish the digest.', 260))}</p>
-          ${signal.why_it_matters ? `<p class="why"><strong>Why it matters:</strong> ${escapeHtml(compact(signal.why_it_matters, 210))}</p>` : ''}
-          ${links(signal.source_links)}
-        </section>
-        <div class="grid">
-          <div>
-            <section class="section">
-              <h2>News</h2>
-              <ol class="card-list">${stories.map(storyCard).join('')}</ol>
-            </section>
-            <section class="section">
-              <h2>Agent Signals</h2>
-              <ul class="card-list">${(digest.agent_signals || []).map(item => simpleCard(item, 'Signal')).join('')}</ul>
-            </section>
-            <section class="section">
-              <h2>Content Ideas</h2>
-              <ul class="card-list">${(digest.content_ideas || []).map(item => simpleCard(item, 'Draft angle')).join('')}</ul>
-            </section>
-          </div>
-          <aside class="rail">
-            <section class="rail-card">
-              <h2>Tools / Launches</h2>
-              <ul>${(digest.tools_and_launches || []).slice(0, 4).map(item => `<li><strong>${escapeHtml(item.name)}:</strong> ${escapeHtml(compact(item.summary, 95))}</li>`).join('') || '<li>No tools in this export.</li>'}</ul>
-            </section>
-            <section class="rail-card">
-              <h2>Watchlist</h2>
-              <ul>${(digest.watchlist || []).map(item => `<li>${escapeHtml(item)}</li>`).join('') || '<li>No public watch items.</li>'}</ul>
-            </section>
-          </aside>
+  <main class="page">
+    <header class="masthead">
+      <div class="mast-row">
+        <div>
+          <div class="section-kicker">Newsletter Insight Digest</div>
+          <div class="brand">Vatsal’s AI Brief</div>
         </div>
-      `;
-    };
-    fetch('./data/latest.json', { cache: 'no-store' })
-      .then(response => {
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        return response.json();
-      })
-      .then(render)
-      .catch(error => {
-        app.textContent = `Could not load public digest: ${error.message}`;
-      });
-  </script>
+        <div class="meta">
+          <span>Tuesday 30 June 2026</span>
+          <span>Last 24 hours</span>
+          <span>Gmail unchanged · public-safe export</span>
+        </div>
+      </div>
+      <p class="dek">Executive Paper style brief: top signals, why they matter, source links, repeated themes, and skipped/noise summary. Focused on agents, model infrastructure, routing, cost optimization, local/cloud models, and developer workflows.</p>
+    </header>
+
+    <section class="lead panel">
+      <div class="section-kicker">Lead signal</div>
+      <h1>Inference speed and cost control are the main model-infra story</h1>
+      <p>Techmeme highlighted DeepSeek&#39;s DSpark speculative decoding work, while Daily Dose covered context engineering that reduces MCP tool-output token load. The pattern is the same: less waste around the model is becoming as valuable as a better model.</p>
+      <p class="why"><strong>Why it matters:</strong> Agent products will win on routing, context budget, tool selection, caching, and inference latency. The model call is only one line item in the system cost.</p>
+      <div class="source-row"><a class="chip primary-source" href="https://www.scmp.com/tech/big-tech/article/3358647/faster-ai-lower-costs-dspark-eases-inference-bottlenecks-and-chip-strain-says-deepseek" target="_blank" rel="noopener noreferrer">SCMP on DeepSeek DSpark via Techmeme</a><a class="chip " href="https://github.com/brightdata/brightdata-mcp" target="_blank" rel="noopener noreferrer">Bright Data MCP</a></div>
+    </section>
+
+    <div class="grid">
+      <div>
+        <section class="at-glance panel">
+          <div class="section-kicker">At a glance</div>
+          <ol><li>Inference speed and cost control are the main model-infra story</li><li>Agent coding is shifting from coding assistant to supervised workflow</li><li>Verifiable-reward RL is still a practical path for math, code, and formal tasks</li></ol>
+        </section>
+        <section class="thesis panel"><strong>Editorial thesis:</strong> The signal is not “more AI news.” It is operational AI: faster inference, cheaper routing, supervised agents, temporal memory, and access constraints becoming product architecture.</section>
+        <section class="section" id="top-signals">
+          <div class="section-title"><h2>The five things that matter</h2></div>
+          <article class="story-card">
+    <div class="story-num">01</div>
+    <div class="story-body">
+      <div class="section-kicker">Model Infrastructure</div>
+      <h3>Inference speed and cost control are the main model-infra story</h3>
+      <p>Techmeme highlighted DeepSeek&#39;s DSpark speculative decoding work, while Daily Dose covered context engineering that reduces MCP tool-output token load. The pattern is the same: less waste around the model is becoming as valuable as a better model.</p>
+      <p class="why"><strong>Why it matters:</strong> Agent products will win on routing, context budget, tool selection, caching, and inference latency. The model call is only one line item in the system cost.</p>
+      <div class="source-row"><a class="chip primary-source" href="https://www.scmp.com/tech/big-tech/article/3358647/faster-ai-lower-costs-dspark-eases-inference-bottlenecks-and-chip-strain-says-deepseek" target="_blank" rel="noopener noreferrer">SCMP on DeepSeek DSpark via Techmeme</a><a class="chip " href="https://github.com/brightdata/brightdata-mcp" target="_blank" rel="noopener noreferrer">Bright Data MCP</a></div>
+    </div>
+  </article><article class="story-card">
+    <div class="story-num">02</div>
+    <div class="story-body">
+      <div class="section-kicker">Developer Workflows</div>
+      <h3>Agent coding is shifting from coding assistant to supervised workflow</h3>
+      <p>The Rundown covered Cursor&#39;s iOS app for launching and tracking agents remotely. Techmeme covered Baz Planner, which uses specialized agents to analyze code before implementation. The same issue also flagged Meta restricting internal use of external coding agents over distillation concerns.</p>
+      <p class="why"><strong>Why it matters:</strong> The workflow is moving from &#39;chat with a model&#39; to &#39;assign, monitor, review, and govern agent work.&#39; Mobile supervision, planning agents, and policy boundaries are all part of the product surface.</p>
+      <div class="source-row"><a class="chip primary-source" href="https://cursor.com/blog/ios-mobile-app#launch-and-track-agents-from-anywhere" target="_blank" rel="noopener noreferrer">Cursor iOS</a><a class="chip " href="https://siliconangle.com/2026/06/29/exclusive-agentic-coding-startup-baz-brings-code-reviews-planning-stage-extends-seed-funding-17m/" target="_blank" rel="noopener noreferrer">Baz Planner via SiliconANGLE</a><a class="chip " href="https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation" target="_blank" rel="noopener noreferrer">Meta limits Claude Code and Codex via The Information</a></div>
+    </div>
+  </article><article class="story-card">
+    <div class="story-num">03</div>
+    <div class="story-body">
+      <div class="section-kicker">Training and Evaluation</div>
+      <h3>Verifiable-reward RL is still a practical path for math, code, and formal tasks</h3>
+      <p>Daily Dose explained GRPO as a simpler RL approach for tasks with objectively checkable outputs. It removes the learned reward model/critic layer used in heavier RLHF setups and is associated with DeepSeek-R1-style training.</p>
+      <p class="why"><strong>Why it matters:</strong> For code, tests, math, formal verification, and data pipelines, the reward can be external and binary. This is useful for agent loops because the validator can be outside the model.</p>
+      <div class="source-row"><a class="chip primary-source" href="https://www.dailydoseofds.com/rl-course-part-10" target="_blank" rel="noopener noreferrer">Daily Dose GRPO explainer</a></div>
+    </div>
+  </article><article class="story-card">
+    <div class="story-num">04</div>
+    <div class="story-body">
+      <div class="section-kicker">AI Industry</div>
+      <h3>Frontier model access is becoming gated, monitored, and policy-shaped</h3>
+      <p>Data Points described a gated GPT-5.6 release with partner controls and monitoring. Techmeme and The Rundown repeated the California-Anthropic public-sector deal. Data Points also mentioned partially lifted Claude access restrictions for trusted institutions.</p>
+      <p class="why"><strong>Why it matters:</strong> Model adoption is no longer just API availability. The pattern is controlled access, monitored use, government or enterprise deals, and release-policy overhead.</p>
+      <div class="source-row"><a class="chip primary-source" href="https://www.politico.com/news/2026/06/29/exclusive-newsom-anthropic-ink-deal-to-expand-government-use-00979584" target="_blank" rel="noopener noreferrer">California and Anthropic via Politico</a></div>
+    </div>
+  </article><article class="story-card">
+    <div class="story-num">05</div>
+    <div class="story-body">
+      <div class="section-kicker">Research</div>
+      <h3>Brain-to-text is a real research signal, but not yet product-ready</h3>
+      <p>Data Points and The Rundown both covered Meta&#39;s Brain2Qwerty v2, a non-invasive brain-to-text system with strong results for some participants and open code/data.</p>
+      <p class="why"><strong>Why it matters:</strong> This is high-signal research for multimodal interfaces, but the near-term takeaway is not consumer UX. Watch it as a future input modality and accessibility research track.</p>
+      <div class="source-row"><a class="chip primary-source" href="https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication" target="_blank" rel="noopener noreferrer">Meta Brain2Qwerty</a></div>
+    </div>
+  </article>
+        </section>
+        <section class="section" id="agent-signals">
+          <div class="section-title"><h2>Agent / infra signals</h2></div>
+          <div class="mini-grid"><article class="mini-card"><div class="section-kicker">Signal</div><h3>Context engineering is agent infrastructure, not prompt polish</h3><p>Daily Dose&#39;s Bright Data MCP example emphasized limiting available tool groups and returning smaller clean outputs.</p><p class="why"><strong>Evidence:</strong> The reported gains were token-budget reductions and reduced irrelevant context, which are system-level improvements.</p><div class="source-row"><a class="chip primary-source" href="https://github.com/brightdata/brightdata-mcp" target="_blank" rel="noopener noreferrer">Bright Data MCP</a></div></article><article class="mini-card"><div class="section-kicker">Signal</div><h3>Temporal memory is becoming a separate agent capability</h3><p>Graphiti-style memory stores when facts were true and handles contradictions over time.</p><p class="why"><strong>Evidence:</strong> This matters for personal agents, long-running customer support agents, and operational copilots where state changes daily.</p><div class="source-row"><a class="chip primary-source" href="https://github.com/getzep/graphiti" target="_blank" rel="noopener noreferrer">Graphiti GitHub</a></div></article><article class="mini-card"><div class="section-kicker">Signal</div><h3>Cost-aware multi-model routing is now visible in product launches</h3><p>Devin Fusion, Amazon model-cost reporting, and speculative decoding all point at the same pattern: quality stays high only if routing and inference economics are engineered.</p><p class="why"><strong>Evidence:</strong> Multiple sources covered speed, cost, or cheaper companion models on the same day.</p><div class="source-row"><a class="chip primary-source" href="https://cognition.com/blog/devin-fusion" target="_blank" rel="noopener noreferrer">Cognition Devin Fusion</a><a class="chip " href="https://www.theinformation.com/articles/amazon-pay-anthropic-technology-new-deal" target="_blank" rel="noopener noreferrer">Amazon model-cost reporting via The Information</a></div></article></div>
+        </section>
+        <section class="section" id="pattern-map">
+          <div class="section-title"><h2>Repeated signals / pattern map</h2></div>
+          <div class="pattern-grid"><article class="pattern-card"><h3>Agent supervision replaces one-shot prompting</h3><ul><li>Cursor iOS</li><li>Baz Planner</li><li>Record and Replay reusable skills</li><li>Meta restrictions on external coding agents</li></ul></article><article class="pattern-card"><h3>Model-infra work is moving toward cost and latency</h3><ul><li>DeepSeek DSpark</li><li>Devin Fusion</li><li>Amazon model-cost reporting</li><li>MCP context reduction</li></ul></article><article class="pattern-card"><h3>Model access is increasingly governed</h3><ul><li>GPT-5.6 gated preview</li><li>Claude institutional access restrictions</li><li>California-Anthropic public-sector deal</li></ul></article></div>
+        </section>
+        <details>
+          <summary>Skipped / noise summary</summary>
+          <ul><li>Consumer entertainment policy items were skipped unless they affected model access, infra, or workflow design.</li><li>General tech litigation and market headlines from Techmeme were skipped when they had no AI, agent, infrastructure, or developer-workflow angle.</li><li>Sponsor blocks, ads, course promos, and repeated newsletter house promos were ignored.</li></ul>
+        </details>
+      </div>
+      <aside class="side">
+        <section class="side-card">
+          <h2>Run report</h2>
+          <ul>
+            <li>Sources checked: 5</li>
+            <li>Messages read: 4</li>
+            <li>Unique insights: 10</li>
+            <li>Duplicates removed: 5</li>
+            <li>Gmail mutations: 0</li>
+          </ul>
+        </section>
+        <section class="side-card">
+          <h2>Tools / launches</h2>
+          <ul><li><strong>Cursor iOS:</strong> Remote supervision is becoming a first-class agent UX.</li><li><strong>Devin Fusion:</strong> This is explicit cost-aware agent routing: expensive model for hard work, cheaper agent for supporting tasks.</li><li><strong>Zep Graphiti:</strong> Useful pattern for agent memory that changes over time instead of static retrieval.</li><li><strong>Gemini 3.5 Flash computer use:</strong> Computer-use agents are becoming a model capability, but product safety still lives in confirmation, termination, and sandboxing.</li></ul>
+        </section>
+        <section class="side-card">
+          <h2>Watchlist</h2>
+          <ul><li>Check whether DSpark or similar speculative decoding lands in mainstream serving stacks.</li><li>Watch Cursor mobile agent supervision for stalled-task UX and PR review flow.</li><li>Track whether Devin Fusion-style multi-agent routing becomes a standard cost pattern.</li><li>Keep model-access policy stories in the digest only when they affect real developer or enterprise adoption.</li><li>Preserve public links in local artifacts, but do not publish public output without explicit approval.</li></ul>
+        </section>
+      </aside>
+    </div>
+    <footer>
+      Method: read-only newsletter extraction from allowlisted sources, insight atom extraction, deterministic and editorial deduplication, source-link preservation, clustering into repeated themes, and public sanitization. No Gmail state changes, no Substack publish, no social posting.
+    </footer>
+  </main>
 </body>
 </html>
