@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "public_export": true,
+  "generated_at": "2026-06-30T20:29:00+01:00",
+  "window": {
+    "label": "Last 24 hours",
+    "start": "2026-06-29T20:29:00+01:00",
+    "end": "2026-06-30T20:29:00+01:00"
+  },
+  "top_stories": [
+    {
+      "title": "Inference speed and cost control are the main model-infra story",
+      "summary": "Techmeme highlighted DeepSeek's DSpark speculative decoding work, while Daily Dose covered context engineering that reduces MCP tool-output token load. The pattern is the same: less waste around the model is becoming as valuable as a better model.",
+      "why_it_matters": "Agent products will win on routing, context budget, tool selection, caching, and inference latency. The model call is only one line item in the system cost.",
+      "category": "Model Infrastructure",
+      "source_names": [
+        "Techmeme",
+        "Daily Dose of DS"
+      ],
+      "source_links": [
+        {
+          "label": "SCMP on DeepSeek DSpark via Techmeme",
+          "url": "https://www.scmp.com/tech/big-tech/article/3358647/faster-ai-lower-costs-dspark-eases-inference-bottlenecks-and-chip-strain-says-deepseek"
+        },
+        {
+          "label": "Bright Data MCP",
+          "url": "https://github.com/brightdata/brightdata-mcp"
+        }
+      ]
+    },
+    {
+      "title": "Agent coding is shifting from coding assistant to supervised workflow",
+      "summary": "The Rundown covered Cursor's iOS app for launching and tracking agents remotely. Techmeme covered Baz Planner, which uses specialized agents to analyze code before implementation. The same issue also flagged Meta restricting internal use of external coding agents over distillation concerns.",
+      "why_it_matters": "The workflow is moving from 'chat with a model' to 'assign, monitor, review, and govern agent work.' Mobile supervision, planning agents, and policy boundaries are all part of the product surface.",
+      "category": "Developer Workflows",
+      "source_names": [
+        "The Rundown AI",
+        "Techmeme"
+      ],
+      "source_links": [
+        {
+          "label": "Cursor iOS",
+          "url": "https://cursor.com/blog/ios-mobile-app#launch-and-track-agents-from-anywhere"
+        },
+        {
+          "label": "Baz Planner via SiliconANGLE",
+          "url": "https://siliconangle.com/2026/06/29/exclusive-agentic-coding-startup-baz-brings-code-reviews-planning-stage-extends-seed-funding-17m/"
+        },
+        {
+          "label": "Meta limits Claude Code and Codex via The Information",
+          "url": "https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation"
+        }
+      ]
+    },
+    {
+      "title": "Verifiable-reward RL is still a practical path for math, code, and formal tasks",
+      "summary": "Daily Dose explained GRPO as a simpler RL approach for tasks with objectively checkable outputs. It removes the learned reward model/critic layer used in heavier RLHF setups and is associated with DeepSeek-R1-style training.",
+      "why_it_matters": "For code, tests, math, formal verification, and data pipelines, the reward can be external and binary. This is useful for agent loops because the validator can be outside the model.",
+      "category": "Training and Evaluation",
+      "source_names": [
+        "Daily Dose of DS"
+      ],
+      "source_links": [
+        {
+          "label": "Daily Dose GRPO explainer",
+          "url": "https://www.dailydoseofds.com/rl-course-part-10"
+        }
+      ]
+    },
+    {
+      "title": "Frontier model access is becoming gated, monitored, and policy-shaped",
+      "summary": "Data Points described a gated GPT-5.6 release with partner controls and monitoring. Techmeme and The Rundown repeated the California-Anthropic public-sector deal. Data Points also mentioned partially lifted Claude access restrictions for trusted institutions.",
+      "why_it_matters": "Model adoption is no longer just API availability. The pattern is controlled access, monitored use, government or enterprise deals, and release-policy overhead.",
+      "category": "AI Industry",
+      "source_names": [
+        "Data Points",
+        "Techmeme",
+        "The Rundown AI"
+      ],
+      "source_links": [
+        {
+          "label": "California and Anthropic via Politico",
+          "url": "https://www.politico.com/news/2026/06/29/exclusive-newsom-anthropic-ink-deal-to-expand-government-use-00979584"
+        }
+      ]
+    },
+    {
+      "title": "Brain-to-text is a real research signal, but not yet product-ready",
+      "summary": "Data Points and The Rundown both covered Meta's Brain2Qwerty v2, a non-invasive brain-to-text system with strong results for some participants and open code/data.",
+      "why_it_matters": "This is high-signal research for multimodal interfaces, but the near-term takeaway is not consumer UX. Watch it as a future input modality and accessibility research track.",
+      "category": "Research",
+      "source_names": [
+        "Data Points",
+        "The Rundown AI"
+      ],
+      "source_links": [
+        {
+          "label": "Meta Brain2Qwerty",
+          "url": "https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication"
+        }
+      ]
+    }
+  ],
+  "tools_and_launches": [
+    {
+      "name": "Cursor iOS",
+      "summary": "Mobile app for starting and monitoring Cursor agents by voice or command, with alerts when work completes, stalls, or opens a PR.",
+      "workflow_angle": "Remote supervision is becoming a first-class agent UX.",
+      "source_links": [
+        {
+          "label": "Cursor iOS",
+          "url": "https://cursor.com/blog/ios-mobile-app#launch-and-track-agents-from-anywhere"
+        }
+      ]
+    },
+    {
+      "name": "Devin Fusion",
+      "summary": "Cognition previewed a setup pairing a frontier coding model with a cheaper sidekick agent.",
+      "workflow_angle": "This is explicit cost-aware agent routing: expensive model for hard work, cheaper agent for supporting tasks.",
+      "source_links": [
+        {
+          "label": "Cognition Devin Fusion",
+          "url": "https://cognition.com/blog/devin-fusion"
+        }
+      ]
+    },
+    {
+      "name": "Zep Graphiti",
+      "summary": "Temporal knowledge graph memory for agents, with typed nodes and edges, contradiction handling, and temporal filtering.",
+      "workflow_angle": "Useful pattern for agent memory that changes over time instead of static retrieval.",
+      "source_links": [
+        {
+          "label": "Graphiti GitHub",
+          "url": "https://github.com/getzep/graphiti"
+        }
+      ]
+    },
+    {
+      "name": "Gemini 3.5 Flash computer use",
+      "summary": "Data Points described native computer-use ability for browser, mobile, and desktop interactions with safety prompts and task termination.",
+      "workflow_angle": "Computer-use agents are becoming a model capability, but product safety still lives in confirmation, termination, and sandboxing.",
+      "source_links": []
+    }
+  ],
+  "agent_signals": [
+    {
+      "title": "Context engineering is agent infrastructure, not prompt polish",
+      "summary": "Daily Dose's Bright Data MCP example emphasized limiting available tool groups and returning smaller clean outputs.",
+      "evidence": "The reported gains were token-budget reductions and reduced irrelevant context, which are system-level improvements.",
+      "source_links": [
+        {
+          "label": "Bright Data MCP",
+          "url": "https://github.com/brightdata/brightdata-mcp"
+        }
+      ]
+    },
+    {
+      "title": "Temporal memory is becoming a separate agent capability",
+      "summary": "Graphiti-style memory stores when facts were true and handles contradictions over time.",
+      "evidence": "This matters for personal agents, long-running customer support agents, and operational copilots where state changes daily.",
+      "source_links": [
+        {
+          "label": "Graphiti GitHub",
+          "url": "https://github.com/getzep/graphiti"
+        }
+      ]
+    },
+    {
+      "title": "Cost-aware multi-model routing is now visible in product launches",
+      "summary": "Devin Fusion, Amazon model-cost reporting, and speculative decoding all point at the same pattern: quality stays high only if routing and inference economics are engineered.",
+      "evidence": "Multiple sources covered speed, cost, or cheaper companion models on the same day.",
+      "source_links": [
+        {
+          "label": "Cognition Devin Fusion",
+          "url": "https://cognition.com/blog/devin-fusion"
+        },
+        {
+          "label": "Amazon model-cost reporting via The Information",
+          "url": "https://www.theinformation.com/articles/amazon-pay-anthropic-technology-new-deal"
+        }
+      ]
+    }
+  ],
+  "content_ideas": [],
+  "watchlist": [
+    "Check whether DSpark or similar speculative decoding lands in mainstream serving stacks.",
+    "Watch Cursor mobile agent supervision for stalled-task UX and PR review flow.",
+    "Track whether Devin Fusion-style multi-agent routing becomes a standard cost pattern.",
+    "Keep model-access policy stories in the digest only when they affect real developer or enterprise adoption.",
+    "Preserve public links in local artifacts, but do not publish public output without explicit approval."
+  ]
+}
