@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "public_export": true,
-  "generated_at": "2026-06-30T21:45:00+01:00",
+  "generated_at": "2026-06-30T22:35:00+01:00",
   "window": {
-    "label": "Last 24 hours",
-    "start": "2026-06-29T21:45:00+01:00",
-    "end": "2026-06-30T21:45:00+01:00"
+    "label": "Yesterday's newsletters",
+    "start": "2026-06-29T00:00:00+01:00",
+    "end": "2026-06-30T00:00:00+01:00"
   },
   "stats": {
     "sources_configured": 5,
@@ -17,53 +17,44 @@
   },
   "top_stories": [
     {
-      "title": "Inference economics are moving from model choice to serving architecture",
-      "summary": "Techmeme highlighted DeepSeek DSpark, a speculative decoding framework reported to speed inference by up to 85%. Daily Dose also covered MCP context engineering that reduces irrelevant tool definitions and shrinks tool-output tokens.",
-      "why_it_matters": "For agent systems, cost and latency will be shaped by serving tricks, model routing, tool scope, and context hygiene as much as by raw model quality.",
-      "category": "Model Infrastructure",
+      "title": "Frontier model launches are becoming access-control events",
+      "summary": "OpenAI's GPT-5.6 family appeared across Data Points and The Rundown as a gated preview: Sol as the flagship, Terra as the cheaper balanced tier, and Luna as the faster low-cost tier. Access is limited to vetted partners at U.S. government request while OpenAI works toward broader release.",
+      "why_it_matters": "For builders, the frontier-model question is no longer just capability or price. It is whether the model is available to your organization, whether access can be pulled into policy review, and whether routing plans need politically resilient fallbacks.",
+      "category": "Model Access",
       "source_names": [
-        "Techmeme",
-        "Daily Dose of DS"
+        "Data Points",
+        "The Rundown AI"
       ],
       "source_links": [
         {
-          "label": "SCMP on DeepSeek DSpark via Techmeme",
-          "url": "https://www.scmp.com/tech/big-tech/article/3358647/faster-ai-lower-costs-dspark-eases-inference-bottlenecks-and-chip-strain-says-deepseek"
+          "label": "OpenAI GPT-5.6 preview",
+          "url": "https://openai.com/index/previewing-gpt-5-6-sol/"
         },
         {
-          "label": "Bright Data MCP",
-          "url": "https://github.com/brightdata/brightdata-mcp"
+          "label": "METR evaluation note",
+          "url": "https://metr.org/blog/2026-06-26-gpt-5-6-sol/"
         }
       ]
     },
     {
-      "title": "Agent coding is becoming a supervised workflow, not a chat window",
-      "summary": "The Rundown covered Cursor's iOS app for launching and tracking coding agents remotely. Techmeme covered Baz Planner, which uses specialized agents during code planning, and Meta limiting external coding agents over distillation risk.",
-      "why_it_matters": "The user interface for agents is shifting toward delegation, monitoring, policy, review, and handoff. The work moves from typing code to supervising runs.",
-      "category": "Developer Workflows",
+      "title": "Computer use is moving into the default agent model, not a sidecar",
+      "summary": "Data Points reported that Google moved computer use from a standalone Gemini 2.5 variant into Gemini 3.5 Flash, making browser/mobile/desktop interaction available as a native developer tool with adversarial training and optional enterprise safeguards.",
+      "why_it_matters": "Computer-use agents are becoming a normal model capability. That raises the baseline for agent products, but also makes sandboxing, confirmation prompts, prompt-injection defenses, and human verification first-class product requirements.",
+      "category": "Agent Interfaces",
       "source_names": [
-        "The Rundown AI",
-        "Techmeme"
+        "Data Points"
       ],
       "source_links": [
         {
-          "label": "Cursor iOS",
-          "url": "https://cursor.com/blog/ios-mobile-app#launch-and-track-agents-from-anywhere"
-        },
-        {
-          "label": "Baz Planner via SiliconANGLE",
-          "url": "https://siliconangle.com/2026/06/29/exclusive-agentic-coding-startup-baz-brings-code-reviews-planning-stage-extends-seed-funding-17m/"
-        },
-        {
-          "label": "Meta limits Claude Code and Codex via The Information",
-          "url": "https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation"
+          "label": "Google Gemini API",
+          "url": "https://ai.google.dev/gemini-api"
         }
       ]
     },
     {
-      "title": "Verifiable rewards are the useful RL path for code, math, and formal tasks",
-      "summary": "Daily Dose explained GRPO and verifiable rewards as a way to remove learned reward models and critics when tasks have objectively checkable answers.",
-      "why_it_matters": "This maps directly to practical agent loops: tests, verifiers, formal checks, and external evaluators can supply a reward signal outside the model.",
+      "title": "Verifiable rewards are the practical RL path for code and math agents",
+      "summary": "Daily Dose covered GRPO and verifiable rewards: using exact checkers instead of learned reward models or critics for tasks like math, code, and formal logic. The frame is that DeepSeek-R1-style training collapses the old four-model RLHF setup into a simpler verifier-driven loop.",
+      "why_it_matters": "This maps directly to agent reliability. Tests, type checks, formal verifiers, sandboxed execution, and external judges are not just evaluation after the fact; they can become the training and steering signal.",
       "category": "Training and Evaluation",
       "source_names": [
         "Daily Dose of DS"
@@ -76,9 +67,9 @@
       ]
     },
     {
-      "title": "Temporal memory is becoming a real agent infrastructure layer",
-      "summary": "Daily Dose highlighted Zep Graphiti, which adds schema-guided extraction, temporal validity, and contradiction handling to graph-based agent memory.",
-      "why_it_matters": "Personal and operational agents need memory that knows what changed. Static retrieval will confidently surface stale facts unless the memory layer tracks time.",
+      "title": "Agent memory needs temporal validity, not just vector recall",
+      "summary": "Daily Dose highlighted Zep Graphiti as a schema-guided temporal knowledge graph: typed entities and edges, contradiction handling, temporal annotations, and query-time filtering by what is currently true.",
+      "why_it_matters": "Personal and operational agents rot when stale facts look as authoritative as fresh ones. Temporal memory is becoming core infrastructure for any agent expected to remember users, projects, subscriptions, plans, or changing systems.",
       "category": "Agent Memory",
       "source_names": [
         "Daily Dose of DS"
@@ -91,93 +82,159 @@
       ]
     },
     {
-      "title": "Non-invasive brain-to-text is a high-signal research track, not a product story yet",
-      "summary": "The Rundown covered Meta Brain2Qwerty v2, which decodes full words and meanings from non-invasive scans with significantly stronger accuracy than previous non-invasive systems.",
-      "why_it_matters": "This matters for future multimodal input and accessibility. The near-term signal is research progress and open code/data, not consumer deployment.",
-      "category": "Research",
+      "title": "MCP context bloat is now a concrete engineering problem",
+      "summary": "Daily Dose covered Bright Data's MCP server changes: tool groups, hand-picked tool loading, and optimized outputs to avoid dumping 60+ tool definitions into every agent context.",
+      "why_it_matters": "This is exactly the failure mode in overgrown agent systems: too many tools become cost, distraction, and hallucinated parameters. Tool scoping is not polish; it is runtime hygiene.",
+      "category": "Agent Infrastructure",
+      "source_names": [
+        "Daily Dose of DS"
+      ],
+      "source_links": [
+        {
+          "label": "Bright Data MCP",
+          "url": "https://github.com/brightdata/brightdata-mcp"
+        }
+      ]
+    },
+    {
+      "title": "The AI economy is scaling faster than historical platform shifts",
+      "summary": "The Rundown cited Exponential View research estimating generative AI revenue at $110B last year and on track for $175B, with quarterly growth around 35% and revenue milestones compressing sharply.",
+      "why_it_matters": "The macro signal is not just hype valuation. Faster revenue scaling means more pressure on inference cost, model access, enterprise controls, and workflow integration \u2014 the boring infrastructure layers that decide who keeps margins.",
+      "category": "Market Infrastructure",
       "source_names": [
         "The Rundown AI"
       ],
       "source_links": [
         {
-          "label": "Meta Brain2Qwerty",
-          "url": "https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication"
+          "label": "Exponential View AI economy research",
+          "url": "https://www.exponentialview.co/p/the-state-of-the-ai-economy"
+        }
+      ]
+    },
+    {
+      "title": "Agent video editing is creeping from toy demo into workflow surface",
+      "summary": "The Rundown described Palmier Pro as a Claude-connected editing workflow that transcribes, captions, cuts, color grades, and can run as an MCP server for Claude Code or Codex.",
+      "why_it_matters": "For content workflows, the relevant signal is not another video tool. It is that creative production is getting agent loops: rough cut, review, revise, caption, polish, export.",
+      "category": "Creative Workflow Agents",
+      "source_names": [
+        "The Rundown AI"
+      ],
+      "source_links": [
+        {
+          "label": "Palmier Pro release",
+          "url": "https://github.com/palmier-io/palmier-pro/releases/latest/download/PalmierPro.dmg"
+        }
+      ]
+    },
+    {
+      "title": "Production agent SDKs are converging on controls before cleverness",
+      "summary": "The Rundown featured AWS Strands Agents as an open-source agent harness SDK emphasizing context management, execution limits, observability, hooks, monitoring, and steering.",
+      "why_it_matters": "The repeated product direction is clear: agents need harnesses, not just prompts. Limits, hooks, monitoring, and debuggability are becoming the part enterprises actually buy.",
+      "category": "Agent Harnesses",
+      "source_names": [
+        "The Rundown AI"
+      ],
+      "source_links": [
+        {
+          "label": "Strands Agents",
+          "url": "https://strandsagents.com/"
         }
       ]
     }
   ],
   "tools_and_launches": [
     {
-      "name": "Devin Fusion",
-      "summary": "Cognition previewed a coding harness that pairs a frontier model with a cheaper sidekick agent.",
-      "workflow_angle": "Explicit cost-aware routing inside an agent workflow.",
+      "name": "GPT-5.6 Sol / Terra / Luna",
+      "summary": "Gated three-tier frontier model family with flagship, balanced cheaper, and fast lower-cost tiers.",
+      "workflow_angle": "Useful only if access is available; reinforces need for routing fallbacks.",
       "source_links": [
         {
-          "label": "Cognition Devin Fusion",
-          "url": "https://cognition.com/blog/devin-fusion"
+          "label": "OpenAI GPT-5.6 preview",
+          "url": "https://openai.com/index/previewing-gpt-5-6-sol/"
         }
       ]
     },
     {
-      "name": "Record and Replay",
-      "summary": "The Rundown guide framed OpenAI/Codex Record and Replay as a way to turn manual workflows into reusable skills.",
-      "workflow_angle": "This is the automation path from observed manual task to scheduled reusable agent procedure.",
+      "name": "Gemini 3.5 Flash computer use",
+      "summary": "Computer-use capability moved into Gemini 3.5 Flash as a native agent tool.",
+      "workflow_angle": "Computer-control agents need sandboxing and human-confirmation defaults.",
       "source_links": [
         {
-          "label": "Rundown guide",
-          "url": "https://app.therundown.ai/guides/automate-any-manual-task-with-this-openai-feature"
+          "label": "Gemini API",
+          "url": "https://ai.google.dev/gemini-api"
         }
       ]
     },
     {
-      "name": "Anthropic Economic Index",
-      "summary": "Anthropic published hourly Claude usage patterns and user survey data.",
-      "workflow_angle": "Useful evidence that AI usage is becoming routine-based, not only task-based.",
+      "name": "GLM-5.2",
+      "summary": "The Rundown listed Zhipu AI's 1M-context long-horizon coding model among trending tools.",
+      "workflow_angle": "Long-context coding models remain worth tracking for repo-scale agent tasks.",
       "source_links": [
         {
-          "label": "Anthropic Economic Index",
-          "url": "https://www.anthropic.com/research/economic-index-june-2026-report"
+          "label": "GLM-5.2 listing",
+          "url": "https://www.rundown.ai/tools/glm-5-2"
+        }
+      ]
+    },
+    {
+      "name": "MAI-Code-1-Flash",
+      "summary": "Microsoft's in-house coding AI was listed as generally available for select users.",
+      "workflow_angle": "Another signal that coding models are becoming productized by platform owners.",
+      "source_links": [
+        {
+          "label": "MAI-Code-1-Flash",
+          "url": "https://microsoft.ai/models/mai-code-1-flash/"
         }
       ]
     }
   ],
   "pattern_map": [
     {
-      "theme": "Agent supervision replaces one-shot prompting",
+      "theme": "Gated frontier access",
       "evidence": [
-        "Cursor iOS",
-        "Baz Planner",
-        "Record and Replay",
-        "Meta coding-agent restrictions"
+        "GPT-5.6 limited preview",
+        "Claude Mythos restored for vetted organizations",
+        "government-mediated rollout"
       ]
     },
     {
-      "theme": "Model-infra work is moving toward cost and latency",
+      "theme": "Agent control surfaces",
       "evidence": [
-        "DeepSeek DSpark",
-        "Devin Fusion",
-        "Amazon model-cost reporting",
-        "MCP context reduction"
+        "Gemini computer use",
+        "Strands Agents",
+        "Palmier Pro",
+        "MCP tool scoping"
       ]
     },
     {
-      "theme": "Verification is the useful bridge between agents and reliability",
+      "theme": "Verification over vibes",
       "evidence": [
         "GRPO/verifiable rewards",
-        "coding-agent review workflows",
-        "agent memory contradiction handling"
+        "METR eval-cheating note",
+        "computer-use confirmation prompts",
+        "agent harness steering"
+      ]
+    },
+    {
+      "theme": "Context and memory hygiene",
+      "evidence": [
+        "Zep Graphiti temporal memory",
+        "Bright Data MCP tool groups",
+        "optimized MCP outputs"
       ]
     }
   ],
   "skipped_noise_summary": [
-    "Techmeme's non-AI legal, crypto, IPO, sports-streaming, and general market items were skipped unless they affected AI infrastructure or developer workflows.",
-    "Newsletter sponsor blocks, ads, unsubscribe/preference links, and course promos were ignored.",
-    "Consumer AI entertainment and generic tool listings were skipped unless they had a clear agent, infra, or workflow angle."
+    "Sponsor blocks and course-subscription promos were ignored.",
+    "Techmeme and The Batch had no matching messages in the June 29 window.",
+    "Brain2Qwerty, IBM 0.7nm transistor design, and Claude Mythos restoration were reviewed but kept as supporting context rather than lead items.",
+    "Consumer discount/tool-listing items were skipped unless they affected agent workflows, model access, or developer infrastructure."
   ],
   "watchlist": [
-    "Track whether DSpark-style speculative decoding becomes a mainstream serving primitive.",
-    "Watch Cursor mobile agent supervision for stalled-task UX, PR review, and notification design.",
-    "Keep an eye on cost-aware multi-agent routing like Devin Fusion.",
-    "Use verifiable rewards and external validators as recurring themes for agent reliability content."
+    "Track whether GPT-5.6 access broadens or stays partner-gated.",
+    "Watch Gemini computer-use safety defaults: confirmation prompts, termination on injection, and sandbox guidance.",
+    "Consider GRPO/verifiable rewards as a recurring angle for agent reliability content.",
+    "Keep MCP tool scoping as a design rule for Hermes/OpenClaw agents.",
+    "Monitor Graphiti-style temporal memory for personal agent state management."
   ]
 }
