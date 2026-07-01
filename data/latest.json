@@ -1,240 +1,331 @@
 {
   "schema_version": 1,
   "public_export": true,
-  "generated_at": "2026-06-30T22:35:00+01:00",
+  "generated_at": "2026-07-01T08:01:42+01:00",
   "window": {
-    "label": "Yesterday's newsletters",
-    "start": "2026-06-29T00:00:00+01:00",
-    "end": "2026-06-30T00:00:00+01:00"
+    "label": "Unread newsletter catch-up since 24 June 2026",
+    "start": "2026-06-24T00:00:00+01:00",
+    "end": "2026-07-01T08:00:00+01:00"
   },
   "stats": {
     "sources_configured": 5,
     "sources_checked": 5,
-    "sources_processed": 3,
-    "messages_read": 3,
-    "unique_insights": 8,
-    "duplicates_removed": 4
+    "sources_processed": 5,
+    "messages_read": 15,
+    "unique_insights": 12,
+    "duplicates_removed": 9
   },
   "top_stories": [
     {
-      "title": "Frontier model launches are becoming access-control events",
-      "summary": "OpenAI's GPT-5.6 family appeared across Data Points and The Rundown as a gated preview: Sol as the flagship, Terra as the cheaper balanced tier, and Luna as the faster low-cost tier. Access is limited to vetted partners at U.S. government request while OpenAI works toward broader release.",
-      "why_it_matters": "For builders, the frontier-model question is no longer just capability or price. It is whether the model is available to your organization, whether access can be pulled into policy review, and whether routing plans need politically resilient fallbacks.",
+      "title": "Frontier AI is turning into an access-control problem",
+      "summary": "Across Techmeme and The Rundown, the U.S. government staggered GPT-5.6 access, restored Anthropic Fable/Mythos access only after review, and pushed frontier releases toward customer-by-customer approval instead of normal product launch mechanics.",
+      "why_it_matters": "For anyone building on top models, the risk has shifted from benchmark variance to availability variance. Routing needs fallbacks, procurement needs policy awareness, and product promises cannot assume public access to the best model on launch day.",
       "category": "Model Access",
       "source_names": [
+        "Techmeme",
+        "The Rundown AI"
+      ],
+      "source_links": [
+        {
+          "label": "Axios on GPT-5.6 preview",
+          "url": "https://www.axios.com/2026/06/26/openai-gpt-sol-terra-luna-trump"
+        },
+        {
+          "label": "Semafor on Mythos access",
+          "url": "https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies"
+        },
+        {
+          "label": "Anthropic access update",
+          "url": "https://x.com/anthropicai/status/2072106151890809341"
+        }
+      ]
+    },
+    {
+      "title": "Inference silicon is becoming the model-platform moat",
+      "summary": "OpenAI and Broadcom unveiled Jalape\u00f1o, an LLM-optimized inference ASIC moved from design to tape-out in nine months with OpenAI models assisting the process. Techmeme, Data Points, and The Rundown all treated it as a major compute-control story.",
+      "why_it_matters": "If OpenAI can own more of inference cost, latency, and supply, model economics get nastier for competitors and more vertically integrated for customers. The boring chip layer is where margins, routing, and access will be fought.",
+      "category": "Model Infrastructure",
+      "source_names": [
+        "Techmeme",
         "Data Points",
         "The Rundown AI"
       ],
       "source_links": [
         {
-          "label": "OpenAI GPT-5.6 preview",
-          "url": "https://openai.com/index/previewing-gpt-5-6-sol/"
+          "label": "OpenAI Jalape\u00f1o",
+          "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip/"
         },
         {
-          "label": "METR evaluation note",
-          "url": "https://metr.org/blog/2026-06-26-gpt-5-6-sol/"
+          "label": "OpenAI/Broadcom collaboration",
+          "url": "https://openai.com/index/openai-and-broadcom-announce-strategic-collaboration/"
         }
       ]
     },
     {
-      "title": "Computer use is moving into the default agent model, not a sidecar",
-      "summary": "Data Points reported that Google moved computer use from a standalone Gemini 2.5 variant into Gemini 3.5 Flash, making browser/mobile/desktop interaction available as a native developer tool with adversarial training and optional enterprise safeguards.",
-      "why_it_matters": "Computer-use agents are becoming a normal model capability. That raises the baseline for agent products, but also makes sandboxing, confirmation prompts, prompt-injection defenses, and human verification first-class product requirements.",
-      "category": "Agent Interfaces",
-      "source_names": [
-        "Data Points"
-      ],
-      "source_links": [
-        {
-          "label": "Google Gemini API",
-          "url": "https://ai.google.dev/gemini-api"
-        }
-      ]
-    },
-    {
-      "title": "Verifiable rewards are the practical RL path for code and math agents",
-      "summary": "Daily Dose covered GRPO and verifiable rewards: using exact checkers instead of learned reward models or critics for tasks like math, code, and formal logic. The frame is that DeepSeek-R1-style training collapses the old four-model RLHF setup into a simpler verifier-driven loop.",
-      "why_it_matters": "This maps directly to agent reliability. Tests, type checks, formal verifiers, sandboxed execution, and external judges are not just evaluation after the fact; they can become the training and steering signal.",
-      "category": "Training and Evaluation",
-      "source_names": [
-        "Daily Dose of DS"
-      ],
-      "source_links": [
-        {
-          "label": "Daily Dose GRPO explainer",
-          "url": "https://www.dailydoseofds.com/rl-course-part-10"
-        }
-      ]
-    },
-    {
-      "title": "Agent memory needs temporal validity, not just vector recall",
-      "summary": "Daily Dose highlighted Zep Graphiti as a schema-guided temporal knowledge graph: typed entities and edges, contradiction handling, temporal annotations, and query-time filtering by what is currently true.",
-      "why_it_matters": "Personal and operational agents rot when stale facts look as authoritative as fresh ones. Temporal memory is becoming core infrastructure for any agent expected to remember users, projects, subscriptions, plans, or changing systems.",
-      "category": "Agent Memory",
-      "source_names": [
-        "Daily Dose of DS"
-      ],
-      "source_links": [
-        {
-          "label": "Graphiti GitHub",
-          "url": "https://github.com/getzep/graphiti"
-        }
-      ]
-    },
-    {
-      "title": "MCP context bloat is now a concrete engineering problem",
-      "summary": "Daily Dose covered Bright Data's MCP server changes: tool groups, hand-picked tool loading, and optimized outputs to avoid dumping 60+ tool definitions into every agent context.",
-      "why_it_matters": "This is exactly the failure mode in overgrown agent systems: too many tools become cost, distraction, and hallucinated parameters. Tool scoping is not polish; it is runtime hygiene.",
+      "title": "Agent engineering has moved outside the model loop",
+      "summary": "Daily Dose repeatedly hammered the same useful point: the while-loop is commoditized; the hard work is stop conditions, context packaging, tool permissions, harness design, and result checking.",
+      "why_it_matters": "This is the practical agent stack. Prompt tweaks are not strategy. Durable systems need harnesses, scoped tools, state control, verification, and operating loops that do not let the model grade its own homework. Shocking, I know.",
       "category": "Agent Infrastructure",
       "source_names": [
         "Daily Dose of DS"
       ],
       "source_links": [
         {
-          "label": "Bright Data MCP",
-          "url": "https://github.com/brightdata/brightdata-mcp"
+          "label": "Loop engineering explainer",
+          "url": "https://www.dailydoseofds.com/p/the-anatomy-of-an-agent-harness/"
+        },
+        {
+          "label": "AI engineering stack",
+          "url": "https://www.dailydoseofds.com/llmops-crash-course-part-1/"
         }
       ]
     },
     {
-      "title": "The AI economy is scaling faster than historical platform shifts",
-      "summary": "The Rundown cited Exponential View research estimating generative AI revenue at $110B last year and on track for $175B, with quarterly growth around 35% and revenue milestones compressing sharply.",
-      "why_it_matters": "The macro signal is not just hype valuation. Faster revenue scaling means more pressure on inference cost, model access, enterprise controls, and workflow integration \u2014 the boring infrastructure layers that decide who keeps margins.",
-      "category": "Market Infrastructure",
+      "title": "Speculative decoding is moving from trick to production speed lever",
+      "summary": "Daily Dose covered Modal's DFlash-style draft models for Qwen, reporting Qwen 3.5 122B-A10B above 1000 tokens/sec versus roughly 250 without speculation while preserving target-model outputs.",
+      "why_it_matters": "Inference throughput is now product surface. Draft models, acceptance length, and memory-bound decode behavior matter because latency and cost decide whether agent workflows feel usable or like wet cement.",
+      "category": "Inference Optimization",
+      "source_names": [
+        "Daily Dose of DS"
+      ],
+      "source_links": [
+        {
+          "label": "Speculative decoding explainer",
+          "url": "https://www.dailydoseofds.com/p/speculative-decoding-in-llms/"
+        },
+        {
+          "label": "Modal Labs",
+          "url": "https://huggingface.co/modal-labs"
+        }
+      ]
+    },
+    {
+      "title": "Claude is being pulled into the team workflow surface",
+      "summary": "The Rundown covered Claude Tag in Slack, and Techmeme covered Claude Sonnet 5 nearing Opus 4.8 performance at lower prices with stronger agentic work. The pattern is Claude moving from single-user assistant to team-native coworker.",
+      "why_it_matters": "The interface shift matters more than the mascot. Slack-native agents create shared context, permissions, auditability, and team-visible work loops \u2014 exactly where enterprise AI either becomes useful or becomes another haunted chatbot.",
+      "category": "Agent Interfaces",
+      "source_names": [
+        "The Rundown AI",
+        "Techmeme"
+      ],
+      "source_links": [
+        {
+          "label": "Anthropic Claude Tag",
+          "url": "https://www.anthropic.com/news/introducing-claude-tag"
+        },
+        {
+          "label": "Claude Sonnet 5",
+          "url": "https://www.anthropic.com/news/claude-sonnet-5"
+        }
+      ]
+    },
+    {
+      "title": "Open weights and low-cost APIs keep pressure on closed frontier models",
+      "summary": "The Batch highlighted GLM-5.2's strong open-weight performance on agentic, web-dev, and post-training benchmarks, with pricing low enough to matter for developers comparing it against expensive proprietary models.",
+      "why_it_matters": "Even if closed labs own the top end, open-weight near-frontier models remain the pressure valve for cost, sovereignty, experimentation, and fallback routing. Ignore them and your stack gets taxed by whatever the frontier vendors feel like charging.",
+      "category": "Models",
+      "source_names": [
+        "The Batch"
+      ],
+      "source_links": [
+        {
+          "label": "Z.ai GLM",
+          "url": "https://z.ai/"
+        },
+        {
+          "label": "Artificial Analysis",
+          "url": "https://artificialanalysis.ai/"
+        }
+      ]
+    },
+    {
+      "title": "Distillation, eval gaming, and model security are now board-level issues",
+      "summary": "The Rundown and Techmeme surfaced Anthropic's accusation that Alibaba accessed Claude millions of times for adversarial distillation, while policy stories around Mythos, Fable, and GPT-5.6 framed safety and security as release gates.",
+      "why_it_matters": "Model theft and release control are not side drama. They affect API monitoring, partner vetting, export policy, model-risk reviews, and whether closed models stay commercially defensible.",
+      "category": "Policy and Security",
+      "source_names": [
+        "The Rundown AI",
+        "Techmeme"
+      ],
+      "source_links": [
+        {
+          "label": "Anthropic distillation defenses",
+          "url": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks"
+        },
+        {
+          "label": "Bloomberg distillation report",
+          "url": "https://www.bloomberg.com/news/articles/2026-06-24/anthropic-accuses-alibaba-of-illicitly-accessing-its-ai-models"
+        }
+      ]
+    },
+    {
+      "title": "AI infra M&A is consolidating around heterogeneous compute",
+      "summary": "Techmeme reported Qualcomm's nearly $4B acquisition of Modular, plus Qualcomm's data-center CPU push for agentic AI and China-compliant chip plans. The common thread is compute software meeting specialized silicon.",
+      "why_it_matters": "The winning infra layer will abstract weird hardware without wasting it. Modular-style compiler/runtime work is not glamorous, which is usually where the actual leverage hides.",
+      "category": "Compute Infrastructure",
+      "source_names": [
+        "Techmeme"
+      ],
+      "source_links": [
+        {
+          "label": "Wired on Qualcomm/Modular",
+          "url": "https://www.wired.com/story/qualcomm-buys-buzzy-chip-startup-modular-for-nearly-dollar4-billion/"
+        },
+        {
+          "label": "Modular",
+          "url": "https://www.modular.com/"
+        }
+      ]
+    },
+    {
+      "title": "AI agents are getting payment rails and delegated action surfaces",
+      "summary": "The Rundown pointed to AgentCard-style workflows for giving agents controlled spending capability, while Mercury pitched finance actions through natural-language banking workflows. The useful signal is permissions, not another prompt pack.",
+      "why_it_matters": "Once agents can spend money or move financial state, guardrails become product primitives: limits, approvals, audit logs, merchant scoping, revocation, and reconciliation.",
+      "category": "Agent Operations",
       "source_names": [
         "The Rundown AI"
       ],
       "source_links": [
         {
-          "label": "Exponential View AI economy research",
-          "url": "https://www.exponentialview.co/p/the-state-of-the-ai-economy"
-        }
-      ]
-    },
-    {
-      "title": "Agent video editing is creeping from toy demo into workflow surface",
-      "summary": "The Rundown described Palmier Pro as a Claude-connected editing workflow that transcribes, captions, cuts, color grades, and can run as an MCP server for Claude Code or Codex.",
-      "why_it_matters": "For content workflows, the relevant signal is not another video tool. It is that creative production is getting agent loops: rough cut, review, revise, caption, polish, export.",
-      "category": "Creative Workflow Agents",
-      "source_names": [
-        "The Rundown AI"
-      ],
-      "source_links": [
+          "label": "AgentCard docs",
+          "url": "https://docs.agentcard.sh/personal/introduction"
+        },
         {
-          "label": "Palmier Pro release",
-          "url": "https://github.com/palmier-io/palmier-pro/releases/latest/download/PalmierPro.dmg"
-        }
-      ]
-    },
-    {
-      "title": "Production agent SDKs are converging on controls before cleverness",
-      "summary": "The Rundown featured AWS Strands Agents as an open-source agent harness SDK emphasizing context management, execution limits, observability, hooks, monitoring, and steering.",
-      "why_it_matters": "The repeated product direction is clear: agents need harnesses, not just prompts. Limits, hooks, monitoring, and debuggability are becoming the part enterprises actually buy.",
-      "category": "Agent Harnesses",
-      "source_names": [
-        "The Rundown AI"
-      ],
-      "source_links": [
-        {
-          "label": "Strands Agents",
-          "url": "https://strandsagents.com/"
+          "label": "Mercury Command",
+          "url": "https://mercury.com/command"
         }
       ]
     }
   ],
   "tools_and_launches": [
     {
-      "name": "GPT-5.6 Sol / Terra / Luna",
-      "summary": "Gated three-tier frontier model family with flagship, balanced cheaper, and fast lower-cost tiers.",
-      "workflow_angle": "Useful only if access is available; reinforces need for routing fallbacks.",
+      "name": "Claude Sonnet 5",
+      "summary": "Anthropic launched Sonnet 5 with near-Opus 4.8 performance claims, better agentic work, and lower-price positioning than top-tier models.",
+      "workflow_angle": "Benchmark it for code-agent and enterprise-document workflows before assuming Opus-tier cost is necessary.",
       "source_links": [
         {
-          "label": "OpenAI GPT-5.6 preview",
-          "url": "https://openai.com/index/previewing-gpt-5-6-sol/"
+          "label": "Claude Sonnet 5",
+          "url": "https://www.anthropic.com/news/claude-sonnet-5"
         }
       ]
     },
     {
-      "name": "Gemini 3.5 Flash computer use",
-      "summary": "Computer-use capability moved into Gemini 3.5 Flash as a native agent tool.",
-      "workflow_angle": "Computer-control agents need sandboxing and human-confirmation defaults.",
+      "name": "Claude Tag",
+      "summary": "Claude can be tagged in Slack to plan and execute tasks using approved tools and channel context.",
+      "workflow_angle": "Worth tracking as the Slack-native version of team agents with shared memory and permissions.",
       "source_links": [
         {
-          "label": "Gemini API",
-          "url": "https://ai.google.dev/gemini-api"
+          "label": "Claude Tag",
+          "url": "https://www.anthropic.com/news/introducing-claude-tag"
+        }
+      ]
+    },
+    {
+      "name": "Jalape\u00f1o inference chip",
+      "summary": "OpenAI and Broadcom's custom inference ASIC targets better performance per watt and a 10 GW custom-compute path by 2029.",
+      "workflow_angle": "If real, it changes pricing and availability assumptions for large-scale OpenAI inference.",
+      "source_links": [
+        {
+          "label": "OpenAI Jalape\u00f1o",
+          "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip/"
+        }
+      ]
+    },
+    {
+      "name": "DFlash draft models",
+      "summary": "Modal-linked draft models use block-diffusion-style speculation to raise accepted tokens per target-model pass.",
+      "workflow_angle": "Track for local/cloud inference stacks where throughput beats raw benchmark vanity.",
+      "source_links": [
+        {
+          "label": "Modal Labs models",
+          "url": "https://huggingface.co/modal-labs"
         }
       ]
     },
     {
       "name": "GLM-5.2",
-      "summary": "The Rundown listed Zhipu AI's 1M-context long-horizon coding model among trending tools.",
-      "workflow_angle": "Long-context coding models remain worth tracking for repo-scale agent tasks.",
+      "summary": "Open-weight model reported by The Batch as strong on web development and post-training tasks at aggressive API pricing.",
+      "workflow_angle": "Candidate fallback for coding and agentic routing if closed frontier access is gated or overpriced.",
       "source_links": [
         {
-          "label": "GLM-5.2 listing",
-          "url": "https://www.rundown.ai/tools/glm-5-2"
+          "label": "Z.ai",
+          "url": "https://z.ai/"
         }
       ]
     },
     {
-      "name": "MAI-Code-1-Flash",
-      "summary": "Microsoft's in-house coding AI was listed as generally available for select users.",
-      "workflow_angle": "Another signal that coding models are becoming productized by platform owners.",
+      "name": "Mistral OCR 4 and Baidu Unlimited OCR",
+      "summary": "The Rundown's tool lists included document/OCR launches relevant to ingestion workflows.",
+      "workflow_angle": "Useful only if they beat existing OCR on messy PDFs and tables; otherwise tool-list confetti.",
       "source_links": [
         {
-          "label": "MAI-Code-1-Flash",
-          "url": "https://microsoft.ai/models/mai-code-1-flash/"
+          "label": "Mistral OCR",
+          "url": "https://mistral.ai/news/ocr-4/"
+        },
+        {
+          "label": "Baidu Unlimited OCR",
+          "url": "https://huggingface.co/baidu/Unlimited-OCR"
         }
       ]
     }
   ],
   "pattern_map": [
     {
-      "theme": "Gated frontier access",
+      "theme": "Access-gated frontier models",
       "evidence": [
         "GPT-5.6 limited preview",
-        "Claude Mythos restored for vetted organizations",
-        "government-mediated rollout"
+        "Fable/Mythos export controls lifted after review",
+        "government approval by customer"
       ]
     },
     {
-      "theme": "Agent control surfaces",
+      "theme": "Inference economics as strategy",
       "evidence": [
-        "Gemini computer use",
-        "Strands Agents",
-        "Palmier Pro",
-        "MCP tool scoping"
+        "Jalape\u00f1o custom ASIC",
+        "DFlash speculative decoding",
+        "Apple/Xbox price pressure from memory and components",
+        "Qualcomm/Modular"
       ]
     },
     {
-      "theme": "Verification over vibes",
+      "theme": "Agent harnesses over prompts",
       "evidence": [
-        "GRPO/verifiable rewards",
-        "METR eval-cheating note",
-        "computer-use confirmation prompts",
-        "agent harness steering"
+        "loop engineering",
+        "context engineering stack",
+        "Claude Tag in Slack",
+        "AgentCard spending controls"
       ]
     },
     {
-      "theme": "Context and memory hygiene",
+      "theme": "Security and verification pressure",
       "evidence": [
-        "Zep Graphiti temporal memory",
-        "Bright Data MCP tool groups",
-        "optimized MCP outputs"
+        "Anthropic distillation accusations",
+        "frontier model red-teaming",
+        "policy-gated releases",
+        "verifiers and result checks"
+      ]
+    },
+    {
+      "theme": "Open alternatives as routing leverage",
+      "evidence": [
+        "GLM-5.2",
+        "Krea 2 open weights",
+        "Meituan LongCat 2.0",
+        "Qwen speculative decoding stack"
       ]
     }
   ],
   "skipped_noise_summary": [
-    "Sponsor blocks and course-subscription promos were ignored.",
-    "Techmeme and The Batch had no matching messages in the June 29 window.",
-    "Brain2Qwerty, IBM 0.7nm transistor design, and Claude Mythos restoration were reviewed but kept as supporting context rather than lead items.",
-    "Consumer discount/tool-listing items were skipped unless they affected agent workflows, model access, or developer infrastructure."
+    "Sponsor blocks, courses, workshops, and prompt-pack promos were ignored unless they exposed a real workflow pattern.",
+    "Consumer hardware price moves, Apple/Xbox pricing, smart glasses, sports-ticket guides, and social platform policy were reviewed but mostly kept out of the main brief.",
+    "Funding/M&A without direct AI infrastructure relevance was skipped; Qualcomm/Modular stayed because compiler/runtime plus chip strategy matters.",
+    "Tom Scott was not included. Good. One less decorative rabbit hole."
   ],
   "watchlist": [
-    "Track whether GPT-5.6 access broadens or stays partner-gated.",
-    "Watch Gemini computer-use safety defaults: confirmation prompts, termination on injection, and sandbox guidance.",
-    "Consider GRPO/verifiable rewards as a recurring angle for agent reliability content.",
-    "Keep MCP tool scoping as a design rule for Hermes/OpenClaw agents.",
-    "Monitor Graphiti-style temporal memory for personal agent state management."
+    "Track whether GPT-5.6 and Anthropic Fable/Mythos access becomes normal GA or stays policy-mediated.",
+    "Watch whether Jalape\u00f1o shows real customer-visible price/latency improvements or remains platform theater.",
+    "Test GLM-5.2 or similar open-weight models as fallback routes for coding/agent tasks.",
+    "Keep speculative decoding and draft-model acceptance length on the infra radar.",
+    "For Hermes/OpenClaw agents, prioritize loop termination, tool scope, spend controls, and audit logs over more prompt seasoning."
   ]
 }
